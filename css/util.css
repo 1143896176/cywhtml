@@ -1,0 +1,109 @@
+.nbsp {
+	margin-left: 10px;
+}
+
+.space-no {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
+.space-no2 {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+}
+
+.space-no {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
+.sucsse {
+	display: inline-block;
+	width: 12px;
+	height: 15px;
+	background: #7ed321;
+	border-radius: 2px;
+	font-size: 9px;
+	color: #FFFFFF;
+	font-family: "微软雅黑";
+	text-indent: 1px;
+	line-height: 12px;
+}
+
+.danger {
+	display: inline-block;
+	width: 12px;
+	height: 15px;
+	background: #ea4949;
+	border-radius: 2px;
+	font-size: 9px;
+	color: #FFFFFF;
+	font-family: "微软雅黑";
+	text-indent: 1px;
+	line-height: 12px;
+}
+
+.flag-d {
+	display: inline-block;
+	background: #ea4949;
+}
+
+.flag-s {
+	background: #7ed321;
+	display: inline-block;
+}
+
+.flag-y {
+	display: inline-block;
+	background: #f7cc47;
+}
+
+.flag-b {
+	background: #4a90e2;
+	display: inline-block;
+}
+
+.l-b {
+	display: inline-block
+}
+
+.b {
+	display: block;
+}
+/*钻石*/
+.z {
+	display: inline-block;
+	background: url(img/首页/钻石1.png)no-repeat center;
+	background-size: contain;
+	width: 15px;
+	height: 15px;
+}
+
+.f12 {
+	font-size: 12px;
+}
+
+.f10 {
+	font-size: 10px;
+}
+/*相对定位*/
+.r {
+	position: relative;
+}
+
+.color-w {
+	color: #FFF;
+}
+.color-w1 {
+	color: #999;
+}
+.color-y1 {
+	color: #F7CC47
+}
+
+.color-y2 {
+	color: #CEAB43;
+}

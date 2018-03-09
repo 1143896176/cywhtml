@@ -4,6 +4,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
 		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/util.css" />
 		<title></title>
 		<!--首页-->
 		<style>
@@ -24,12 +25,12 @@
 			
 			.header {
 				min-width: 320px;
-				border: 1px solid red;
 				width: 100%;
 				height: 40px;
 				position: fixed;
 				top: 0px;
 				color: #f7cc47;
+				background: #383635;
 			}
 			
 			.header-l {
@@ -37,27 +38,29 @@
 				margin: 10px 0;
 				margin-left: 10px;
 				font-size: 1rem;
-				border: red 1px solid;
 			}
 			
 			.header-c {
 				width: 100%;
-				border: 1px solid #F7CC47;
+				border: 1px solid #685c3a;
 				border-radius: 15px;
 				margin: 5px 2px;
 				font-size: 11px;
-				display:flex;
+				color: #685c3a;
+				display: flex;
 				flex-flow: row;
 				justify-content: center;
 				padding-top: 8px;
 			}
 			
 			.header-l img {
-				margin-bottom:2px ;
+				margin-bottom: 2px;
 			}
+			
 			.header-c img {
-				margin-top:2px ;
+				margin-top: 2px;
 			}
+			
 			.header-c>span {
 				line-height: 10px;
 			}
@@ -69,11 +72,11 @@
 			
 			.body {
 				min-width: 320px;
-				border: 1px solid #00f;
+				background: #2c2c2c;
 				width: 100%;
 				position: fixed;
-				top: 50px;
-				bottom: 50px;
+				top: 40px;
+				bottom: 40px;
 				overflow: scroll;
 			}
 			
@@ -113,11 +116,16 @@
 				display: inline-block;
 			}
 			
+			.styles {
+				padding: 10px 0;
+				background: #383635;
+				color: #ceab43;
+			}
+			
 			.styles>li {
-				background: #888;
 				font-size: 13px;
 				width: 30px;
-				border: 1px solid #0000FF;
+				text-align: center;
 			}
 			
 			.styles-img {
@@ -125,7 +133,6 @@
 				width: 30px;
 				background: url(img/首页/中餐.png) no-repeat center;
 				background-size: contain;
-				border: 1px solid red;
 			}
 			
 			.fenge {
@@ -139,85 +146,96 @@
 			.fenge-l {
 				width: 100%;
 				height: 0px;
-				border-bottom: 1px solid red;
+				border-bottom: 1px solid #c5a36b;
 				margin-left: 20px;
 			}
 			
 			.fenge-c {
 				text-align: center;
 				min-width: 70px;
+				font-size: 15px;
+				color: #c5a36b;
 			}
 			
 			.fenge-r {
 				width: 100%;
 				height: 0px;
-				border-bottom: 1px solid red;
+				border-bottom: 1px solid #c5a36b;
 				margin-right: 20px;
 			}
 			
 			.center-ban {
 				width: 320px;
-				height: 230px;
+				height: 250px;
 				position: relative;
+				background: #383635;
+				box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.50);
+				border-radius: 5px;
+				margin: 10px 0;
 			}
-			.center-ban >li{
+			
+			.center-ban>li {
 				position: absolute;
+				/*float: left;*/
 			}
+			
 			.center-ban-bottom {
 				padding: 0 10px;
+				color: #999999;
+			}
+			
+			.score {
+				background: #CEAB43;
+				height: 56px;
+				width: 56px;
+				border-radius: 50px;
+				position: absolute;
+				top: -35px;
+				right: 20px;
+				text-align: center;
+				line-height: 56px;
+				font-size: 18px;
+				color: #FFF;
 			}
 			
 			.center-ban-bottom>div:nth-child(2) {
-				border-bottom: 1px solid red;
+				border-bottom: thin solid #999999;
 			}
-			.list{
+			
+			.list {
 				padding-top: 20px;
-				
 				width: 90%;
 				margin: 5px auto;
-				border-radius: 8px;
-				border: 1px solid red;
+				
 				position: relative;
-				padding-bottom:15px ;
+				padding-bottom: 15px;
+				background: #383635;
+				box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.50);
+				border-radius: 5px;
+				overflow: hidden;
 			}
-			.list-img{
-				margin-left:10px ;
+			
+			.list-img {
+				margin-left: 10px;
 			}
-			.list-font{
-				margin-right:10px ;
-				margin-left:8px ;
+			
+			.list-font {
+				margin-right: 10px;
+				margin-left: 8px;
 				width: 100%;
 			}
-			.flag{
-				height:18px;
-				width: 40px;
-				border:1px solid red ;
-				border-top-right-radius:8px ;
+			
+			.flag {
+				height: 18px;
+				width: 31px;
+				text-align: center;
+				line-height: 18px;
 				position: absolute;
 				right: 0;
-				top:0;
-			}
-			.nbsp{
-				margin-left:10px ;
-			}
-			.space-no {
-				display: flex;
-				flex-flow: row nowrap;
-				justify-content: space-between;
-				
+				top: 0;
 			}
 			
-			.space-no2 {
-				display: flex;
-				flex-flow: row nowrap;
-				justify-content: space-around;
-			}
 			
-			.space-no {
-				display: flex;
-				flex-flow: row nowrap;
-				justify-content: space-between;
-			}
 			
 			.footer {
 				min-width: 320px;
@@ -228,48 +246,6 @@
 				bottom: 0px;
 			}
 			
-			.sucsse {
-				display: inline-block;
-				width: 10px;
-				height: 13px;
-				background: #7ed321;
-				border-radius: 2px;
-				font-size: 9px;
-				color: #FFFFFF;
-				font-family: "微软雅黑";
-				line-height: 11px;
-			}
-			
-			.danger {
-				display: inline-block;
-				width: 10px;
-				height: 13px;
-				background: #ea4949;
-				border-radius: 2px;
-				font-size: 9px;
-				color: #FFFFFF;
-				font-family: "微软雅黑";
-				line-height: 11px;
-			}
-			
-			.l-b {
-				display: inline-block
-			}
-			
-			.b {
-				display: block;
-			}
-			.z{
-				display:inline-block;
-				background: url(img/首页/钻石1.png)no-repeat center;
-				background-size: contain;
-				width:15px;
-				height:15px;
-				
-			}
-			.f12{
-				font-size:12px;
-			}
 		</style>
 	</head>
 
@@ -282,8 +258,8 @@
 			    <img src="img/首页/向右三角.png" width="8" height="8"></span>
 			</div>
 			<div class="header-c">
-				<img src="img/首页/搜索2x.png" width="12" height="12" ><span class="">请输入商家或菜品关键字</span>
-				
+				<img src="img/首页/搜索2x.png" width="12" height="12"><span class="">请输入商家或菜品关键字</span>
+
 			</div>
 			<div class="header-r">
 				<span class="l-b" style="width:40px;font-size:13px">-11℃晴天</span>
@@ -344,29 +320,33 @@
 					<div class="center-ban-top">
 						<img src="img/首页/精选图片.png" width="320" height="141">
 					</div>
-					<div class="center-ban-bottom">
+					<div class="center-ban-bottom r">
 						<div class="space-no">
-							<span class="l-b">海天一色</span>
-							<span class="l-b" style="">3.7</span>
+							<span class="l-b" style="font-size:15px;color:#f7cc47;line-height: 30px;">海天一色</span>
+							<span class="l-b  score " style="">3.7</span>
 						</div>
 						<div class=" space-no">
-							<ul>
-								<li>优惠内容</li>
+							<ul class="space-no f10">
+								<li >200元起送</li><li class="nbsp">销量:2091</li><li class="nbsp">2.4km</li><li class="nbsp">平台配送</li>
 							</ul>
-							<ul>
-								<li>钻石位置</li>
+							<ul class="space-no">
+								<li class="z"></li>
+								<li class="z"></li>
+								<li class="z"></li>
+								<li class="z"></li>
+								<li class="z"></li>
 							</ul>
 						</div>
 
 						<div>
 
 							<div>
-								<span class="sucsse">首</span><span class="">
+								<span class="sucsse">首</span><span class="f10">
 								首单立减50元
 							</span>
 							</div>
 							<div>
-								<span class="danger">首</span><span class="">
+								<span class="danger">首</span><span class="f10">
 								首单立减50元
 							</span>
 							</div>
@@ -375,76 +355,7 @@
 					</div>
 
 				</li>
-				<li>
-					<div class="center-ban-top">
-						<img src="img/首页/精选图片.png" width="320" height="141">
-					</div>
-					<div class="center-ban-bottom">
-						<div class="space-no">
-							<span class="l-b">海天一色</span>
-							<span class="l-b" style="">3.7</span>
-						</div>
-						<div class=" space-no">
-							<ul>
-								<li>优惠内容</li>
-							</ul>
-							<ul>
-								<li>钻石位置</li>
-							</ul>
-						</div>
-
-						<div>
-
-							<div>
-								<span class="sucsse">首</span><span class="">
-								首单立减50元
-							</span>
-							</div>
-							<div>
-								<span class="danger">首</span><span class="">
-								首单立减50元
-							</span>
-							</div>
-
-						</div>
-					</div>
-
-				</li>
-				<li>
-					<div class="center-ban-top">
-						<img src="img/首页/精选图片.png" width="320" height="141">
-					</div>
-					<div class="center-ban-bottom">
-						<div class="space-no">
-							<span class="l-b">海天一色</span>
-							<span class="l-b" style="">3.7</span>
-						</div>
-						<div class=" space-no">
-							<ul>
-								<li>优惠内容</li>
-							</ul>
-							<ul>
-								<li>钻石位置</li>
-							</ul>
-						</div>
-
-						<div>
-
-							<div>
-								<span class="sucsse">首</span><span class="">
-								首单立减50元
-							</span>
-							</div>
-							<div>
-								<span class="danger">首</span><span class="">
-								首单立减50元
-							</span>
-							</div>
-
-						</div>
-					</div>
-
-				</li>
+				
 
 			</ul>
 			<div class="fenge">
@@ -452,39 +363,40 @@
 				<div class="fenge-c">距离最近</div>
 				<div class="fenge-r"></div>
 			</div>
-            <div class=" list space-no">
-            	<div class="flag"  ></div>
-            	<div class="list-img" >
-            		<img src="img/首页/97236A7D-3C38-4528-B679-7DE3D1E273C5@2x.png" width="75" height="75">
-            	</div>
-            	
-            	<ul class="list-font" >
-            		<li class="space-no"> 
-            			<div>登瀛楼<span class="z"></span><span class="z"></span><span class="z"></span><span class="z"></span><span class="z"></span></div><div class="f12">3.1km</div>
-            		</li>
-            		<li>
-            			<p class="f12">评分：<span>8.7</span></p>
-            		</li>
-            		<li class="space-no">
-            			<p class="f12">200元起送    <span class="nbsp l-b">销量：2091</span></p><p class="f12">平台配送</p>
-            		</li>
-            		<li>
-            			<div>
-								<span class="sucsse">首</span><span class="">
+			<div class=" list space-no">
+				<div class="flag flag-s f10 color-w " >新店 </div>
+				<div class="list-img">
+					<img src="img/首页/97236A7D-3C38-4528-B679-7DE3D1E273C5@2x.png" width="75" height="75">
+				</div>
+
+				<ul class="list-font">
+					<li class="space-no">
+						<div class="color-y1">登瀛楼<span class="z"></span><span class="z"></span><span class="z"></span><span class="z"></span><span class="z"></span></div>
+						<div class="f12 color-w1">3.1km</div>
+					</li>
+					<li>
+						<p class="f12 color-w1">评分：<span class="color-y1">8.7</span></p>
+					</li>
+					<li class="space-no">
+						<p class="f12 color-w1 ">200元起送 <span class="nbsp l-b">销量：2091</span></p>
+						<p class="f12 color-w1">平台配送</p>
+					</li>
+					<li>
+						<div>
+							<span class="sucsse">首</span><span class="f10 color-y1">
 								首单立减50元
 							</span>
-							</div>
-							<div>
-								<span class="danger">首</span><span class="">
+						</div>
+						<div>
+							<span class="danger">首</span><span class="f10 color-y1">
 								首单立减50元
 							</span>
-							</div>
-            		</li>
-            		
-            	</ul>
-            		
-            	
-            </div>
+						</div>
+					</li>
+
+				</ul>
+
+			</div>
 		</div>
 		<!--底部固定-->
 		<div class="footer">
