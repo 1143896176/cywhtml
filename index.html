@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<meta charset="utf-8" />
+		<title></title>
+		<!--首页-->
+		<style>
+			* {
+				padding: 0px;
+				margin: 0px;
+				font-family: "微软雅黑";
+			}
+			
+			body,
+			html {
+				height: 100%;
+			}
+			
+			li {
+				list-style: none;
+			}
+			
+			.header {
+				min-width: 320px;
+				border: 1px solid red;
+				width: 100%;
+				height: 40px;
+				position: fixed;
+				top: 0px;
+				color: #f7cc47;
+			}
+			
+			.header-l {
+				min-width: 78px;
+				margin: 10px 0;
+				margin-left: 10px;
+				font-size: 1rem;
+				border: red 1px solid;
+			}
+			
+			.header-c {
+				width: 100%;
+				border: 1px solid #F7CC47;
+				border-radius: 15px;
+				margin: 5px 2px;
+				font-size: 11px;
+				display:flex;
+				flex-flow: row;
+				justify-content: center;
+				padding-top: 8px;
+			}
+			
+			.header-l img {
+				margin-bottom:2px ;
+			}
+			.header-c img {
+				margin-top:2px ;
+			}
+			.header-c>span {
+				line-height: 10px;
+			}
+			
+			.header-r {
+				min-width: 70px;
+			}
+			/*中间部分样式*/
+			
+			.body {
+				min-width: 320px;
+				border: 1px solid #00f;
+				width: 100%;
+				position: fixed;
+				top: 50px;
+				bottom: 50px;
+				overflow: scroll;
+			}
+			
+			::-webkit-scrollbar {
+				display: none;
+			}
+			/*banner样式*/
+			
+			.banner {
+				position: relative;
+				height: 120px;
+				border: 1px solid #f00;
+			}
+			
+			.banner-img {
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+			
+			.banner-img>li {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 100%;
+				background: url(img/首页/banner1x.png) no-repeat center;
+				background-size: 100% 100%;
+			}
+			
+			.banner-number {
+				position: absolute;
+				bottom: 20px;
+			}
+			
+			.banner-number li {
+				border: 1px solid red;
+				display: inline-block;
+			}
+			
+			.styles>li {
+				background: #888;
+				font-size: 13px;
+				width: 30px;
+				border: 1px solid #0000FF;
+			}
+			
+			.styles-img {
+				height: 20px;
+				width: 30px;
+				background: url(img/首页/中餐.png) no-repeat center;
+				background-size: contain;
+				border: 1px solid red;
+			}
+			
+			.fenge {
+				height: 50px;
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: space-around;
+				align-items: center;
+			}
+			
+			.fenge-l {
+				width: 100%;
+				height: 0px;
+				border-bottom: 1px solid red;
+				margin-left: 20px;
+			}
+			
+			.fenge-c {
+				text-align: center;
+				min-width: 70px;
+			}
+			
+			.fenge-r {
+				width: 100%;
+				height: 0px;
+				border-bottom: 1px solid red;
+				margin-right: 20px;
+			}
+			
+			.center-ban {
+				width: 320px;
+				height: 230px;
+				position: relative;
+			}
+			.center-ban >li{
+				position: absolute;
+			}
+			.center-ban-bottom {
+				padding: 0 10px;
+			}
+			
+			.center-ban-bottom>div:nth-child(2) {
+				border-bottom: 1px solid red;
+			}
+			.list{
+				padding-top: 20px;
+				
+				width: 90%;
+				margin: 5px auto;
+				border-radius: 8px;
+				border: 1px solid red;
+				position: relative;
+				padding-bottom:15px ;
+			}
+			.list-img{
+				margin-left:10px ;
+			}
+			.list-font{
+				margin-right:10px ;
+				margin-left:8px ;
+				width: 100%;
+			}
+			.flag{
+				height:18px;
+				width: 40px;
+				border:1px solid red ;
+				border-top-right-radius:8px ;
+				position: absolute;
+				right: 0;
+				top:0;
+			}
+			.nbsp{
+				margin-left:10px ;
+			}
+			.space-no {
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: space-between;
+				
+			}
+			
+			.space-no2 {
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: space-around;
+			}
+			
+			.space-no {
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: space-between;
+			}
+			
+			.footer {
+				min-width: 320px;
+				border: 1px solid red;
+				width: 100%;
+				height: 40px;
+				position: fixed;
+				bottom: 0px;
+			}
+			
+			.sucsse {
+				display: inline-block;
+				width: 10px;
+				height: 13px;
+				background: #7ed321;
+				border-radius: 2px;
+				font-size: 9px;
+				color: #FFFFFF;
+				font-family: "微软雅黑";
+				line-height: 11px;
+			}
+			
+			.danger {
+				display: inline-block;
+				width: 10px;
+				height: 13px;
+				background: #ea4949;
+				border-radius: 2px;
+				font-size: 9px;
+				color: #FFFFFF;
+				font-family: "微软雅黑";
+				line-height: 11px;
+			}
+			
+			.l-b {
+				display: inline-block
+			}
+			
+			.b {
+				display: block;
+			}
+			.z{
+				display:inline-block;
+				background: url(img/首页/钻石1.png)no-repeat center;
+				background-size: contain;
+				width:15px;
+				height:15px;
+				
+			}
+			.f12{
+				font-size:12px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<!--头部固定搜索-->
+		<div class="header space-no">
+			<div class="header-l">
+				<span>美年广场
+			    <img src="img/首页/向右三角.png" width="8" height="8"></span>
+			</div>
+			<div class="header-c">
+				<img src="img/首页/搜索2x.png" width="12" height="12" ><span class="">请输入商家或菜品关键字</span>
+				
+			</div>
+			<div class="header-r">
+				<span class="l-b" style="width:40px;font-size:13px">-11℃晴天</span>
+				<span><img alt="太阳" width="20"></span>
+			</div>
+		</div>
+
+		<div class="body">
+			<div class="banner">
+				<ul class="banner-img">
+					<li>a</li>
+					<li>b</li>
+					<li>c</li>
+					<li>d</li>
+				</ul>
+
+				<ul class="banner-number">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+				</ul>
+
+			</div>
+
+			<!--分类-->
+			<ul class="styles space-no2">
+				<li>
+					<span class="styles-img b"></span>
+					<span class="b">中餐</span>
+				</li>
+				<li>
+					<span class="styles-img b"></span>
+					<span class="b">中餐</span>
+				</li>
+				<li>
+					<span class="styles-img b"></span>
+					<span class="b">中餐</span>
+				</li>
+				<li>
+					<span class="styles-img b"></span>
+					<span class="b">中餐</span>
+				</li>
+			</ul>
+			<!--小展示图片-->
+			<div class="show-img">
+				<img alt="图片" src="img/首页/展示图.png" class="l-b" width="100" height="">
+				<img alt="图片" src="img/首页/展示图.png" class="l-b" width="100" height="">
+			</div>
+			<div class="fenge">
+				<div class="fenge-l"></div>
+				<div class="fenge-c">精选推荐</div>
+				<div class="fenge-r"></div>
+			</div>
+			<!--精选推荐部分-->
+			<ul class="center-ban">
+				<li>
+					<div class="center-ban-top">
+						<img src="img/首页/精选图片.png" width="320" height="141">
+					</div>
+					<div class="center-ban-bottom">
+						<div class="space-no">
+							<span class="l-b">海天一色</span>
+							<span class="l-b" style="">3.7</span>
+						</div>
+						<div class=" space-no">
+							<ul>
+								<li>优惠内容</li>
+							</ul>
+							<ul>
+								<li>钻石位置</li>
+							</ul>
+						</div>
+
+						<div>
+
+							<div>
+								<span class="sucsse">首</span><span class="">
+								首单立减50元
+							</span>
+							</div>
+							<div>
+								<span class="danger">首</span><span class="">
+								首单立减50元
+							</span>
+							</div>
+
+						</div>
+					</div>
+
+				</li>
+				<li>
+					<div class="center-ban-top">
+						<img src="img/首页/精选图片.png" width="320" height="141">
+					</div>
+					<div class="center-ban-bottom">
+						<div class="space-no">
+							<span class="l-b">海天一色</span>
+							<span class="l-b" style="">3.7</span>
+						</div>
+						<div class=" space-no">
+							<ul>
+								<li>优惠内容</li>
+							</ul>
+							<ul>
+								<li>钻石位置</li>
+							</ul>
+						</div>
+
+						<div>
+
+							<div>
+								<span class="sucsse">首</span><span class="">
+								首单立减50元
+							</span>
+							</div>
+							<div>
+								<span class="danger">首</span><span class="">
+								首单立减50元
+							</span>
+							</div>
+
+						</div>
+					</div>
+
+				</li>
+				<li>
+					<div class="center-ban-top">
+						<img src="img/首页/精选图片.png" width="320" height="141">
+					</div>
+					<div class="center-ban-bottom">
+						<div class="space-no">
+							<span class="l-b">海天一色</span>
+							<span class="l-b" style="">3.7</span>
+						</div>
+						<div class=" space-no">
+							<ul>
+								<li>优惠内容</li>
+							</ul>
+							<ul>
+								<li>钻石位置</li>
+							</ul>
+						</div>
+
+						<div>
+
+							<div>
+								<span class="sucsse">首</span><span class="">
+								首单立减50元
+							</span>
+							</div>
+							<div>
+								<span class="danger">首</span><span class="">
+								首单立减50元
+							</span>
+							</div>
+
+						</div>
+					</div>
+
+				</li>
+
+			</ul>
+			<div class="fenge">
+				<div class="fenge-l"></div>
+				<div class="fenge-c">距离最近</div>
+				<div class="fenge-r"></div>
+			</div>
+            <div class=" list space-no">
+            	<div class="flag"  ></div>
+            	<div class="list-img" >
+            		<img src="img/首页/97236A7D-3C38-4528-B679-7DE3D1E273C5@2x.png" width="75" height="75">
+            	</div>
+            	
+            	<ul class="list-font" >
+            		<li class="space-no"> 
+            			<div>登瀛楼<span class="z"></span><span class="z"></span><span class="z"></span><span class="z"></span><span class="z"></span></div><div class="f12">3.1km</div>
+            		</li>
+            		<li>
+            			<p class="f12">评分：<span>8.7</span></p>
+            		</li>
+            		<li class="space-no">
+            			<p class="f12">200元起送    <span class="nbsp l-b">销量：2091</span></p><p class="f12">平台配送</p>
+            		</li>
+            		<li>
+            			<div>
+								<span class="sucsse">首</span><span class="">
+								首单立减50元
+							</span>
+							</div>
+							<div>
+								<span class="danger">首</span><span class="">
+								首单立减50元
+							</span>
+							</div>
+            		</li>
+            		
+            	</ul>
+            		
+            	
+            </div>
+		</div>
+		<!--底部固定-->
+		<div class="footer">
+
+		</div>
+
+	</body>
+
+</html>
