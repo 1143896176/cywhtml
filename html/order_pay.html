@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" href="../css/util.css" />
+		<style type="text/css">
+			
+			.body{
+				overflow: scroll;
+			}
+			::-webkit-scrollbar{
+				display: none;
+			}
+			.header-top{
+				text-align: center;
+				line-height: 40px;
+				font-size: 17px;
+			}
+			.header-btoom>span{
+				padding: 0 5px;
+				display: inline-block;
+				line-height: 35px;
+				font-size: 14px;
+				height: 37px;
+				border-bottom: 3px solid #F7CC47;
+				
+			}
+			.order-list{
+				width: 100%;
+				background:#383635;
+				
+				margin-top: 10px;
+				padding-top:10px ;
+				padding-bottom: 10px;
+				padding-left: 10px;
+			}
+			.order-l{
+				height: 100%;
+				
+				margin-right: 10px;
+				
+			}
+			
+			.order-r{
+				width: 100%;
+				padding-left: 10px;
+				
+			}
+			.order-r>p{
+				line-height: 40px;
+				padding-right: 20px ;
+				height: 46px;
+				border-bottom: thin solid #999999;
+				margin-bottom: 10px;
+			}
+			.order-r>div{
+				padding-right: 20px;
+				line-height: 25px;
+			}
+			
+			.pay-number{
+				display: flex;
+				margin-bottom: 10px;
+				justify-content: flex-end;
+			}
+			.action{
+				width:75px;
+				height: 30px;
+				border-radius:7px;
+				font-size: 14px;
+				text-align: center;
+				line-height: 30px;
+				color:#FFF;
+				
+				float: right;
+				margin-right: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class=" header color-y1" style="height: 80px; ">
+		    <div class="header-top" >订单</div>
+		    <div class="header-btoom space-no2">
+		    	<span>代收款</span><span>待收货</span><span>待回收</span><span>已完成</span>
+		    </div>
+		</div>
+		
+		<ul class="body"style="top: 80px; ">
+			<li class="order-list space-no">
+				<div class="order-l ">
+					
+					<img src="../img/头像.png" width="34" height="34">
+				</div>
+				<div class="order-r ">
+					<p class="color-y1">两室一厅老味道   <span class="color-w1 f12"style="float: right;">待评价</span></p>
+					<div class="space-no f12 color-w1"><span>土豆丝</span><span>x1</span></div>
+					<div class="space-no f12 color-w1"><span>酸辣土豆丝</span><span>x1</span></div>
+					<div class="space-no f12 color-w1"><span>酸辣土豆丝</span><span>x1</span></div>
+					<div class=" pay-number f12 color-w1"><span >共8件商品，实付款</span><span class="color-y1 f14 ">￥300</span></div>
+					<a href="javascript:void(0)" class=" action flag-y1 ">确认收货</a>
+				</div>
+			</li>
+			
+		</ul>
+		<div class="footer">
+			
+		</div>
+	</body>
+</html>

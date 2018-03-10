@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="../css/util.css" />
+		<title></title>
+		<style>
+			.footer>div {
+				height: 100%;
+				border: 1px solid red;
+			}
+			
+			.car {
+				width: 40px;
+				height: 40px;
+				margin-left: 20px;
+				border-radius: 50px;
+				position: relative;
+				bottom: 25px;
+				background: #c9ac51;
+				background-image: url(../img/购物车空.png);
+				background-size: 25px;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			
+			.footer {
+				background: #2d2d2d;
+				display: flex;
+				flex-flow: row;
+			}
+			.footer-l{
+				width: 100%;
+			}
+			.footer-l>span{
+				line-height: 50px;
+			}
+			.footer-r {
+				width: 110px;
+				background: #333333;
+				text-align: center;
+				line-height: 40px;
+				color: white;
+				font-size: 14px;
+				padding: 0 20px;
+			}
+			
+			
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<div class="show-img">
+				<img src="../img/商品展示大图.png">
+			</div>
+			<div class="">
+				<div>
+
+				</div>
+
+			</div>
+		</div>
+		<div class="footer">
+
+			<div class="footer-l">
+				<div class="car l-b">
+					<span class=" wam l-b" style="">1</span>
+				</div>
+				<span class="color-w">
+					总计:￥300
+				</span>
+			</div>
+			<div class="footer-r">还差200起送</div>
+		</div>
+	</body>
+
+</html>
