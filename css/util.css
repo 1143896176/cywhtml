@@ -75,8 +75,8 @@ a{
 	font-size: 9px;
 	color: #FFFFFF;
 	font-family: "微软雅黑";
-	text-indent: 1px;
-	line-height: 12px;
+	text-align: center;
+	line-height: 15px;
 }
 
 .danger {
