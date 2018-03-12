@@ -70,11 +70,11 @@ a {
 
 .sucsse {
     display: inline-block;
-    width: 12px;
+    width: 15px;
     height: 15px;
     background: #7ed321;
     border-radius: 2px;
-    font-size: 9px;
+    font-size: 10px;
     color: #FFFFFF;
     font-family: "微软雅黑";
     text-align: center;
@@ -83,11 +83,11 @@ a {
 
 .danger {
     display: inline-block;
-    width: 12px;
+    width: 15px;
     height: 15px;
     background: #ea4949;
     border-radius: 2px;
-    font-size: 9px;
+    font-size: 10px;
     color: #FFFFFF;
     font-family: "微软雅黑";
     text-align: center;
