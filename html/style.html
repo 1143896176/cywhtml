@@ -1,30 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <meta http-equiv="pragma" content="no-cache">
-    <meta http-equiv="cache-control" content="no-cache">
-    <meta http-equiv="expires" content="0">
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="css/util.css"/>
-    <title>Title</title>
-    <!--种类-->
-</head>
-<body>
-    <div class="header">
-    <div class="titles space-no">
-        <span>返回</span>
-        <span>中餐</span>
-        <span>搜索</span>
-    </div>
-        <ul class="all-style"></ul>
-        <ul class="sort">
+	<head>
 
-        </ul>
-    </div>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="expires" content="0">
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../css/util.css" />
+		<title>Title</title>
+		<!--种类-->
+		<style>
+			.titles {
+				display: flex;
+				line-height: 40px;
+			}
+			
+			.all-style {
+				overflow-x: scroll;
+				padding-right: 10px;
+				line-height: 37px;
+			}
+			
+			::-webkit-scrollbar {
+				display: none;
+			}
+			
+			.all-style>li {
+				min-width: 20%;
+				margin: 0 5px;
+				padding: 0 5px;
+				text-align: center;
+				flex: 1;
+				border-bottom: 3px solid #CEAB43;
+			}
+			
+			.all-style>.long {
+				min-width: 50px;
+			}
+			
+			.last {
+				padding-right: 20px;
+			}
+			
+			.sort>li {
+				flex: 1;
+				min-width: 80px;
+				text-align: center;
+				line-height: 40px;
+			}
+			
+			.list {
+				padding: 20px 0;
+				width: 94%;
+				margin: 10px auto;
+				position: relative;
+				padding-bottom: 15px;
+				background: #383635;
+				box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.50);
+				border-radius: 5px;
+				overflow: hidden;
+			}
+			
+			.list-img {
+				margin-left: 10px;
+			}
+			
+			.list-font {
+				margin-right: 10px;
+				margin-left: 8px;
+				width: 100%;
+			}
+			.list-font>li:nth-child(1){
+				padding: 5px 0 10px 0;
+			}
+			.list-font>li:nth-child(2),
+			.list-font>li:nth-child(3){
+				line-height: 20px;
+			}
+			.list-font>li:nth-child(3){
+				padding-bottom: 5px;
+				border-bottom: thin solid #999999;
+			}
+			.flag {
+				height: 18px;
+				width: 31px;
+				text-align: center;
+				line-height: 18px;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+		</style>
+	</head>
 
-</body>
+	<body>
+		<div class="header" style="height:120px">
+			<div class="titles space-no">
+				<span>返回</span>
+				<span>中餐</span>
+				<span>搜索</span>
+			</div>
+			<ul class="all-style space-no">
+				<li>全部</li>
+				<li class="long">地方菜</li>
+				<li>津菜</li>
+
+				<li>徽菜</li>
+				<li>湘菜</li>
+				<li>闽菜</li>
+				<li>浙菜</li>
+				<li>苏菜</li>
+				<li>徽菜</li>
+				<li>湘菜</li>
+				<li class="last">闽菜</li>
+			</ul>
+			<ul class="sort space-no">
+				<li>综合排序</li>
+				<li>销量最高</li>
+				<li>评分最高</li>
+				<li>距离最近</li>
+			</ul>
+		</div>
+		<ul class="body" style="top:120px;bottom: 0;">
+			<li class=" list space-no">
+				<div class="flag flag-s f10 color-w ">新店</div>
+				<div class="list-img">
+					<img src="../img/首页/97236A7D-3C38-4528-B679-7DE3D1E273C5@2x.png" width="75" height="75">
+				</div>
+
+				<ul class="list-font">
+					<li class="space-no name">
+						<div class="color-y1 ">登瀛楼<span class="nbsp z"></span><span class="z"></span><span class="z"></span><span class="z"></span><span class="z"></span></div>
+						<div class="f12 color-w1">3.1km</div>
+					</li>
+					<li>
+						<p class="f12 color-w1">评分：<span class="color-y1">8.7</span></p>
+					</li>
+					<li class="space-no">
+						<p class="f12 color-w1 ">200元起送 <span class="nbsp l-b">销量：2091</span></p>
+						<p class="f12 color-w1">平台配送</p>
+					</li>
+					<li>
+						<div>
+							<span class="sucsse">首</span><span class="f10 color-y1">
+								首单立减50元
+							</span>
+						</div>
+						<div>
+							<span class="danger">首</span><span class="f10 color-y1">
+								首单立减50元
+							</span>
+						</div>
+					</li>
+
+				</ul>
+
+			</li>
+			<li class=" list space-no">
+				<div class="flag flag-s f10 color-w ">新店</div>
+				<div class="list-img">
+					<img src="../img/首页/97236A7D-3C38-4528-B679-7DE3D1E273C5@2x.png" width="75" height="75">
+				</div>
+
+				<ul class="list-font">
+					<li class="space-no">
+						<div class="color-y1 ">登瀛楼<span class="nbsp z"></span><span class="z"></span><span class="z"></span><span class="z"></span><span class="z"></span></div>
+						<div class="f12 color-w1">3.1km</div>
+					</li>
+					<li>
+						<p class="f12 color-w1">评分：<span class="color-y1">8.7</span></p>
+					</li>
+					<li class="space-no">
+						<p class="f12 color-w1 ">200元起送 <span class="nbsp l-b">销量：2091</span></p>
+						<p class="f12 color-w1">平台配送</p>
+					</li>
+					<li>
+						<div>
+							<span class="sucsse">首</span><span class="f10 color-y1">
+								首单立减50元
+							</span>
+						</div>
+						<div>
+							<span class="danger">首</span><span class="f10 color-y1">
+								首单立减50元
+							</span>
+						</div>
+					</li>
+
+				</ul>
+
+			</li>
+			<li class=" list space-no">
+				<div class="flag flag-s f10 color-w ">新店</div>
+				<div class="list-img">
+					<img src="../img/首页/97236A7D-3C38-4528-B679-7DE3D1E273C5@2x.png" width="75" height="75">
+				</div>
+
+				<ul class="list-font">
+					<li class="space-no">
+						<div class="color-y1 ">登瀛楼<span class="nbsp z"></span><span class="z"></span><span class="z"></span><span class="z"></span><span class="z"></span></div>
+						<div class="f12 color-w1">3.1km</div>
+					</li>
+					<li>
+						<p class="f12 color-w1">评分：<span class="color-y1">8.7</span></p>
+					</li>
+					<li class="space-no">
+						<p class="f12 color-w1 ">200元起送 <span class="nbsp l-b">销量：2091</span></p>
+						<p class="f12 color-w1">平台配送</p>
+					</li>
+					<li>
+						<div>
+							<span class="sucsse">首</span><span class="f10 color-y1">
+								首单立减50元
+							</span>
+						</div>
+						<div>
+							<span class="danger">首</span><span class="f10 color-y1">
+								首单立减50元
+							</span>
+						</div>
+					</li>
+
+				</ul>
+
+			</li>
+		</ul>
+
+	</body>
+
 </html>
