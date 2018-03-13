@@ -16,7 +16,7 @@ li {
 a {
     text-decoration: none;
 }
-
+/*底部样式*/
 .footer {
     min-width: 320px;
     border: 1px solid red;
@@ -25,7 +25,28 @@ a {
     position: fixed;
     bottom: 0px;
 }
-
+.home-page{
+    display:block;
+    height:22px;
+    width:22px;
+    background: url(../img/首页/首页图标黄色.png)no-repeat center;
+}
+.me{
+    display:block;
+    height:22px;
+    width:22px;
+    background: url(../img/首页/我的灰色1x.png)no-repeat center;
+}
+.order{
+    display:block;
+    height:20px;
+    width:20px;
+    background: url(../img/首页/我的灰色1x.png)no-repeat center;
+}
+.footer>li{
+    font-size:10px;
+}
+/*底部样式↑*/
 .body {
     min-width: 320px;
     background: #2c2c2c;
@@ -35,7 +56,9 @@ a {
     bottom: 40px;
     overflow: scroll;
 }
-
+::-webkit-scrollbar{
+    display:none;
+}
 .header {
     min-width: 320px;
     width: 100%;
@@ -67,7 +90,7 @@ a {
     flex-flow: row nowrap;
     justify-content: space-between;
 }
-
+/*首单立减等样式↓*/
 .sucsse {
     display: inline-block;
     width: 15px;
@@ -93,7 +116,8 @@ a {
     text-align: center;
     line-height: 17px;
 }
-
+/*首单↑*/
+/*商户标记↓*/
 .flag-d {
     display: inline-block;
     background: #ea4949;
@@ -118,7 +142,23 @@ a {
     background: #4a90e2;
     display: inline-block;
 }
+/*商户标记↑*/
+/*字体颜色↓*/
+.color-w {
+    color: #FFF;
+}
 
+.color-w1 {
+    color: #999;
+}
+
+.color-y1 {
+    color: #F7CC47
+}
+
+.color-y2 {
+    color: #CEAB43;
+}
 .l-b {
     display: inline-block
 }
@@ -156,21 +196,7 @@ a {
     position: relative;
 }
 
-.color-w {
-    color: #FFF;
-}
 
-.color-w1 {
-    color: #999;
-}
-
-.color-y1 {
-    color: #F7CC47
-}
-
-.color-y2 {
-    color: #CEAB43;
-}
 
 /*订单*/
 .action {

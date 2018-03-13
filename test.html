@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Title</title>
+    <style>
+        body > div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            display: flex;
+            flex-flow: row;
+            overflow: scroll;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        .a {
+            min-width: 50px;
+            height: 100%;
+            background: #7ed321;
+            margin: 0 10px;
+
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="a">
+        1
+    </div>
+    <div class="a">
+        2
+    </div>
+    <div class="a">
+        3
+    </div>
+    <div class="a">
+        4
+    </div>
+    <div class="a">
+        5
+    </div>
+    <div class="a">
+        6
+    </div>
+    <div class="a">
+        7
+    </div>
+    <div class="a">
+        8
+    </div>
+    <div class="a">
+        9
+    </div>
+    <div class="a">
+        10
+    </div>
+    <div class="a">
+        11
+    </div>
+    <div class="a">
+        12
+    </div>
+
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+    window.onload = function () {
+        var x1;
+        var x2;
+        var y1;
+        var y2;
+        var time1;
+        var time2
+        var i = 0;
+        document.addEventListener('touchstart', function (e) {
+            x1 = e.clientX || e.pageX;
+            y1 = e.clientY || e.pageY;
+            time1 = new Date().getTime();
+            console.log(time1)
+        }, false)
+        document.addEventListener('touchend', function (e) {
+            x2 = e.clientX || e.pageX;
+            y2 = e.clientY || e.pageY;
+            time2 = new Date().getTime();
+            var t=time2-time1
+            console.log(typeof t)
+            var x=x2-x1
+            var v=x/t
+            console.log( v);
+        }, false)
+    }
+
+
+</script>
+</body>
+</html>

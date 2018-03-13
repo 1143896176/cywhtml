@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <link rel="stylesheet" href="../css/util.css">
+    <title>我的</title>
+    <style>
+        .my-h {
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .more {
+            display: inline-block;
+            height: 20px;
+            width: 13px;
+            background: url(../img/更多.png) no-repeat center;
+            background-size: contain;
+        }
+
+        .message-top > div:nth-child(2) {
+            flex: 1;
+            text-alin: left;
+        }
+        .message-bot>ul>li{
+            height: 35px;
+            border:1px solid #ffffff;
+            flex:1;
+        }
+        .message-bot .yue{
+            display:block;
+            height:25px;
+            background: url("../img/我的/余额.png")no-repeat center;
+            background-size:contain;
+        }
+    </style>
+</head>
+<body>
+<div class="header my-h">
+    我的
+</div>
+<div class="body">
+    <div class="message">
+        <div class="message-top space-no">
+            <div>
+                <img src="../img/头像.png" alt="">
+            </div>
+            <div>
+                <span class="">
+                 12345679812
+                 </span><br>
+                <span class="">
+                    123 12345679812
+                </span>
+            </div>
+            <div>
+                <span class="more"></span>
+            </div>
+        </div>
+        <div class="message-bot">
+            <ul class="space-no2">
+                <li><a><span class="yue"></span><span class="b">我的余额</span></a></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<ul class="footer space-no2">
+    <li>
+        <a class="color-y1" href="javascript:void(0)">
+            <span class="home-page"></span>
+            <span>首页</span>
+        </a></li>
+    <li><a class="color-y1" href="javascript:void(0)"><span class="order"></span></a></li>
+    <li><a class="color-y1" href="javascript:void(0)"><span class="me"></span></a></li>
+
+</ul>
+</body>
+</html>
