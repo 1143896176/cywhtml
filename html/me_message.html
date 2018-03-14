@@ -13,30 +13,118 @@
         .my-h {
             text-align: center;
             line-height: 40px;
+
         }
 
         .more {
+            margin-top:10px ;
+            margin-right: 20px;
             display: inline-block;
             height: 20px;
             width: 13px;
             background: url(../img/更多.png) no-repeat center;
             background-size: contain;
         }
+        .message{
+            margin-top: 20px;
+            background: #383635;
+        }
+        .message-top{
 
+            padding-top: 20px;
+        }
         .message-top > div:nth-child(2) {
             flex: 1;
             text-alin: left;
         }
+        .message-top img{
+            margin: 0 20px;
+            width: 48px;
+            height: 48px;
+        }
+        .message-bot{
+            margin-top: 25px;
+        }
         .message-bot>ul>li{
-            height: 35px;
-            border:1px solid #ffffff;
+            height: 25px;
             flex:1;
         }
-        .message-bot .yue{
+
+        .message-bot>ul:nth-child(2)>li{
+            margin-bottom: 10px;
+        }
+        .message-bot>ul:nth-child(2)>li:nth-child(2){
+            border-left: 2px solid white;
+            border-right: 2px solid white;
+        }
+        .message-bot .yve{
+
             display:block;
-            height:25px;
+            height:19px;
             background: url("../img/我的/余额.png")no-repeat center;
             background-size:contain;
+        }
+        .warp{
+            display:block;
+            text-align: center;
+            color:white;
+            font-size: 15px;
+            line-height: 25px;
+        }
+       .list>li{
+            height:50px;
+           background:#383635;
+           border-bottom:thin solid #2b2b2b ;
+        }
+        .list{
+            margin-top:20px;
+            align-items: center;
+        }
+        .list>li>p{
+            flex: 1;
+        }
+        /*标志*/
+        .sign{
+            display:inline-block;
+            height:19px;
+            width: 19px;
+            border:1px solid red;
+        }
+        .car{
+            background: url(../img/我的/卡券.png) no-repeat center;
+            background-size: contain;
+        }
+        .fapiao{
+            background: url(../img/我的/发票.png) no-repeat center;
+            background-size: contain;
+        }
+        .gps{
+            background: url(../img/我的/定位.png) no-repeat center;
+            background-size: contain;
+        }
+        .tel{
+            background: url(../img/我的/客服.png) no-repeat center;
+            background-size: contain;
+        }
+        .yajin{
+            background: url(../img/我的/押金.png) no-repeat center;
+            background-size: contain;
+        }
+        .collectionc{
+            background: url(../img/我的/收藏.png) no-repeat center;
+            background-size: contain;
+        }
+        .pingjia{
+            background: url(../img/我的/评价.png) no-repeat center;
+            background-size: contain;
+        }
+        .setting{
+            background: url(../img/我的/设置.png) no-repeat center;
+            background-size: contain;
+        }
+        .invit{
+            background: url(../img/我的/邀请.png) no-repeat center;
+            background-size: contain;
         }
     </style>
 </head>
@@ -64,12 +152,27 @@
         </div>
         <div class="message-bot">
             <ul class="space-no2">
-                <li><a><span class="yue"></span><span class="b">我的余额</span></a></li>
+                <li><a><span class="yve"></span></a></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="space-no2">
+                <li><a><span class="warp">我的余额</span></a></li>
                 <li></li>
                 <li></li>
             </ul>
         </div>
     </div>
+    <ul class="list">
+        <li class="space-no">
+            <span class="sign car"></span>
+            <p><span>2张</span><span>我的卡券</span></p><span class="more"></span>
+        </li>
+        <li class="">
+            <span class="sign pingjia" ></span>
+            <span>我的卡券</span><span>2张</span><span class="more"></span>
+        </li>
+    </ul>
 </div>
 <ul class="footer space-no2">
     <li>
