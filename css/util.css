@@ -41,7 +41,7 @@ a {
     display:block;
     height:20px;
     width:20px;
-    background: url(../img/首页/我的灰色1x.png)no-repeat center;
+    background: url(../img/首页/信息灰色1x.png)no-repeat center;
 }
 .footer>li{
     font-size:10px;
@@ -226,7 +226,10 @@ a {
     height: 13px;
     background: url(../img/筛选.png);
 }
-
+a{
+    text-decoration: none;
+    color: #ceab43;
+}
 /*警告   红色圆点提示*/
 .wam {
     width: 14px;
