@@ -33,7 +33,6 @@
     $('body').on('click', '.placeholder img', function(e) {
         //touchstart在你之前发生，不管些什么，都先执行下面的
     });
-
     $('body').on('touchstart', '#gallerySlider img', function(e) {
         var touch = e.originalEvent,
             startX = touch.changedTouches[0].pageX;
