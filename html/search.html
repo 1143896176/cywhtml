@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="img/logo.png">
+    <link href="../css/util.css" rel="stylesheet" type="text/css"/>
+    <!-- 3月20 -->
+    <title>搜索</title>
+    <style>
+        * {
+            moz-user-select: -moz-none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .search {
+            background-size: contain;
+        }
+
+        input {
+            background: transparent;
+            border: 0 solid transparent;
+
+        }
+
+        .header{
+            display: flex;
+          justify-content: space-between;
+
+        }
+
+        .history>li{
+            width: 20%;
+            height: 30px;
+           display: inline-block;
+            border:1px solid red;
+            margin: 0 2%;
+        }
+    </style>
+</head>
+<body>
+<div class="header " style="position: relative">
+    <div>
+        <span class="search"></span> <input type="text" placeholder="搜索">
+    </div>
+    <a href="javascript:void(0)">返回</a>
+</div>
+<div class="boday">
+    <p>历史搜索 <span class="delt" ></span></p>
+    <ul class=" history">
+        <li> </li>
+        <li> </li>
+        <li> </li>
+        <li> </li>
+        <li> </li>
+    </ul>
+    <p>热门搜索 <span class="delt" ></span></p>
+    <ul class=" history">
+        <li> </li>
+        <li> </li>
+        <li> </li>
+        <li> </li>
+        <li> </li>
+    </ul>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+<script>
+  $(function() {
+      var t = $('input').val();
+      $('.search').click(function () {
+          t = $('input').val()
+          var $li = "<li>" + t + "</li>"
+          $('.history').prepend($li);
+      })
+
+  })
+
+
+</script>
+</html>

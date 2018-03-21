@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Title</title>
+    <style>
+        * {
+            moz-user-select: -moz-none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .warp{
+            height:100%;
+            width:100%;
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+<div class="warp">
+
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script>
+    $('body').on('click', '.placeholder img', function(e) {
+        //touchstart在你之前发生，不管些什么，都先执行下面的
+    });
+
+    $('body').on('touchstart', '#gallerySlider img', function(e) {
+        var touch = e.originalEvent,
+            startX = touch.changedTouches[0].pageX;
+        startY = touch.changedTouches[0].pageY;
+        slider.on('touchmove', function(e) {
+            e.preventDefault();
+            touch = e.originalEvent.touches[0] ||
+                e.originalEvent.changedTouches[0];
+            if (touch.pageX - startX > 10) {
+                alert("右划");
+                slider.off('touchmove');
+                showPrevious();
+            } else if (touch.pageX - startX < -10) {
+                alert("左划");
+                slider.off('touchmove');
+                showNext();
+            };
+            if (touch.pageY - startY > 10) {
+                alert("下划");
+            } else if (touch.pageY - startY < -10) {
+                alert("上划");
+            };
+        });
+
+        // Return false to prevent image
+        // highlighting on Android
+        return false;
+
+    }).on('touchend', function() {
+        slider.off('touchmove');
+    });
+</script>
+</html>
