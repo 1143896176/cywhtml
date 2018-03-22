@@ -15,7 +15,12 @@
             -webkit-user-select: none;
             -ms-user-select: none;
             user-select: none;
+            touch-action: none;
         }
+       html, body{
+            height:100%;
+        }
+
         .warp{
             height:100%;
             width:100%;
@@ -24,45 +29,111 @@
     </style>
 </head>
 <body>
-<div class="warp">
+<link rel="stylesheet" href="css/ft-carousel.css" />
+<style>
+    body{margin: 0;font-family: "微软雅黑";background-color: #1F1F1F;}
+    .example {width: 624px;height: 336px;font-size: 40px;text-align: center;margin: 20px auto;background-color: #464576;}
+    .carousel-item{line-height: 336px;color: #fff;font-family:  Arial Black}
+</style>
 
+</head>
+<body>
+
+<div class="example">
+    <div class="ft-carousel" id="carousel_1">
+        <ul class="carousel-inner">
+            <li class="carousel-item"><img src="img/a1.jpg" /></li>
+            <li class="carousel-item"><img src="img/a2.jpg" /></li>
+            <li class="carousel-item"><img src="img/a3.jpg" /></li>
+            <li class="carousel-item"><img src="img/a4.jpg" /></li>
+            <li class="carousel-item"><img src="img/a5.jpg" /></li>
+            <li class="carousel-item"><img src="img/a6.jpg" /></li>
+        </ul>
+    </div>
 </div>
+
+<div class="example">
+    <div class="ft-carousel" id="carousel_2">
+        <ul class="carousel-inner">
+            <li class="carousel-item">1</li>
+            <li class="carousel-item">2</li>
+            <li class="carousel-item">3</li>
+            <li class="carousel-item">4</li>
+            <li class="carousel-item">5</li>
+        </ul>
+    </div>
+</div>
+
+<div class="example">
+    <div class="ft-carousel" id="carousel_3">
+        <ul class="carousel-inner">
+            <li class="carousel-item">1</li>
+            <li class="carousel-item">2</li>
+            <li class="carousel-item">3</li>
+            <li class="carousel-item">4</li>
+            <li class="carousel-item">5</li>
+            <li class="carousel-item">6</li>
+            <li class="carousel-item">7</li>
+        </ul>
+    </div>
+</div>
+
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/ft-carousel.min.js"></script>
+<script type="text/javascript">
+    $("#carousel_1").FtCarousel();
+
+    $("#carousel_2").FtCarousel({
+        index: 1,
+        auto: false
+    });
+
+    $("#carousel_3").FtCarousel({
+        index: 0,
+        auto: true,
+        time: 3000,
+        indicators: false,
+        buttons: true
+    });
+</script>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';color:#ffffff">
+    <p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+    <p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+
 </body>
 <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 <script>
-    $('body').on('click', '.placeholder img', function(e) {
-        //touchstart在你之前发生，不管些什么，都先执行下面的
+    $("body").on("touchstart", function(e) {
+        e.preventDefault();
+        startX = e.originalEvent.changedTouches[0].pageX,
+            startY = e.originalEvent.changedTouches[0].pageY;
     });
-    $('body').on('touchstart', '#gallerySlider img', function(e) {
-        var touch = e.originalEvent,
-            startX = touch.changedTouches[0].pageX;
-        startY = touch.changedTouches[0].pageY;
-        slider.on('touchmove', function(e) {
-            e.preventDefault();
-            touch = e.originalEvent.touches[0] ||
-                e.originalEvent.changedTouches[0];
-            if (touch.pageX - startX > 10) {
-                alert("右划");
-                slider.off('touchmove');
-                showPrevious();
-            } else if (touch.pageX - startX < -10) {
-                alert("左划");
-                slider.off('touchmove');
-                showNext();
-            };
-            if (touch.pageY - startY > 10) {
-                alert("下划");
-            } else if (touch.pageY - startY < -10) {
-                alert("上划");
-            };
-        });
 
-        // Return false to prevent image
-        // highlighting on Android
-        return false;
+    $("body").on("touchmove", function(e) {
+        e.preventDefault();
+        moveEndX = e.originalEvent.changedTouches[0].pageX,
+            moveEndY = e.originalEvent.changedTouches[0].pageY,
+            X = moveEndX - startX,
+            Y = moveEndY - startY;
 
-    }).on('touchend', function() {
-        slider.off('touchmove');
-    });
+        if ( Math.abs(X) > Math.abs(Y) && X > 0 ) {
+            $('carousel-next-btn').click();
+            console .log("left 2 right");
+        }
+        else if ( Math.abs(X) > Math.abs(Y) && X < 0 ) {
+            $('carousel-prev-btn').click();
+            console .log("right 2 left");
+        }
+        else if ( Math.abs(Y) > Math.abs(X) && Y > 0) {
+            console .log("top 2 bottom");
+        }
+        else if ( Math.abs(Y) > Math.abs(X) && Y < 0 ) {
+            console .log("bottom 2 top");
+        }
+        else{
+            console .log("just touch");
+        }
+    },);
 </script>
 </html>

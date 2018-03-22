@@ -8,7 +8,7 @@
     <meta http-equiv="cache-control" content="no-cache">
     <meta http-equiv="expires" content="0">
     <meta charset="utf-8"/>
-    <link rel="stylesheet" href="css/ft-carousel.css">
+    <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/util.css"/>
     <title>首页</title>
     <!--首页-->
@@ -77,33 +77,11 @@
 
         /*banner样式*/
 
-        .banner {
-            position: relative;
+       .swiper-container {
+            width: 100%;
             height: 120px;
-            border: 1px solid #f00;
-            overflow: hidden;
-        }
-        .banner-img {
-            width: 100%;
-            height: 100%;
-            position: relative;
-        }
-        .banner-img > li {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 100%;
-            background: url(img/首页/banner1x.png) no-repeat center;
-            background-size: 100% 100%;
-        }
-        .banner-number {
-            position: absolute;
-            bottom: 20px;
-        }
+           background: #F7CC47;
 
-        .banner-number li {
-            border: 1px solid red;
-            display: inline-block;
         }
 
         .styles {
@@ -173,6 +151,7 @@
         .center-ban > li {
            /* position: absolute;*/
             /*float: left;*/
+
             min-width: 90%;
             background: #383635;
             box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.50);
@@ -259,6 +238,13 @@
     padding-top: 3px;
     font-size: 12px;
 }
+        .swiper-slide{
+            width: 100%;
+        }
+        .swiper-pagination>span{
+            width: 5px ;
+            height: 5px;
+        }
     </style>
 </head>
 
@@ -281,31 +267,17 @@
 </div>
 
 <div class="body">
-    <div class=" ft-carousel">
-        <ul class="carousel-inner">
-            <li class="carousel-item"><img src="img/首页/banner1.png" /></li>
-            <li class="carousel-item"><img src="img/首页/banner1.png" /></li>
-            <li class="carousel-item"><img src="img/首页/banner1.png" /></li>
-            <li class="carousel-item"><img src="img/首页/banner1.png" /></li>
-            <li class="carousel-item"><img src="img/首页/banner1.png" /></li>
-            <li class="carousel-item"><img src="img/首页/banner1.png" /></li>
-        </ul>
-        <!--<ul class="banner-img">
-            <li><img src="img/首页/banner1.png"/></li>
-            <li><img src="img/首页/banner2.png"/></li>
-            <li><img src="img/首页/banner3.png"/></li>
-            <li><img src="img/首页/banner4.png"/></li>
-        </ul>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" ><img src="img/首页/banner1.png" alt="" width="100%"></div>
+            <div class="swiper-slide" ><img src="img/首页/banner2.png" alt="" width="100%"></div>
+           <!-- <div class="swiper-slide" style="width: 100%"><img src="img/首页/banner3.png" alt="" width="100%"></div>-->
+        </div>
 
-        <ul class="banner-number">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-        </ul>-->
+        <!-- 如果需要分页器 -->
+       <div class="swiper-pagination"></div>
 
     </div>
-
     <!--分类-->
     <ul class="styles space-no2">
         <li>
@@ -559,15 +531,39 @@
     <div><a href="html/me_message.html"> <span class="b me"></span>我的</a></div>
 
 </div>
-<script src="js/jquery-3.3.1.js"></script>
-<script src="js/ft-carousel.min.js"></script>
+<!--<script src="js/jquery-3.3.1.js"></script>-->
+<script src="js/swiper.js"></script>
 <script >
-$(function(){
-      $(".header-c").click(function(){
-          window.open("html/search.html")
-      })
-     $('.ft-carousel').FtCarousel()
-})
+    var mySwiper = new Swiper ('.swiper-container', {
+        autoplay: {
+            stopOnLastSlide: true,
+            disableOnInteraction: false,
+        },
+
+        loop: true,//控制无限循环
+
+        // 如果需要分页器
+       pagination: {
+            el: '.swiper-pagination',
+        },
+         direction : 'horizontal',
+         // 如果需要前进后退按钮
+        /*  nextButton: '.swiper-button-next',
+         prevButton: '.swiper-button-prev',
+         speed:100,
+         // 如果需要滚动条
+ //         scrollbar: '.swiper-scrollbar',
+         /!*effect : 'coverflow',*!/
+         slidesPerView: 3,
+         centeredSlides: true,
+         coverflow: {
+             rotate: 30,
+             stretch: 10,
+             depth: 60,
+             modifier: 2,
+             slideShadows : true
+         }*/
+    })
 </script>
 </body>
 
