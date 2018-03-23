@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="img/logo.png">
+    <!--<link href="../css/style.css" rel="stylesheet" type="text/css"/>-->
+    <title>登录</title>
+    <style>
+        * {
+            moz-user-select: -moz-none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            margin: 0;
+            padding: 0;
+        }
+        .warp>div{
+            float: left;
+            width: 50%;
+            height: 43px;
+            /*border-bottom: 2px solid #c9ac51;*/
+            font-family:PingFangSC-Regular;
+            font-size:14px;
+            color:#666666;
+            color:green;
+            text-align: center;
+            line-height: 43px;
+        }
+       form>div>span{
+           display:inline-block;
+           width: 80px;
+
+       }
+        form>div>input{
+            border: 0px ;
+            width: 100px;
+        }
+        .quikly-login{
+            display:none;
+        }
+        .borde{
+            border-bottom: 2px solid #c9ac51;
+        }
+        a{
+            text-decoration: none;
+            color: #007aff;
+            font-size: 14px;
+
+        }
+        .warp{
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .warp>.agreement{
+            clear: left;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        form>div>span{
+            margin-left: 20px;
+        }
+        .register-sub,.login-sub{
+            display: block;
+            margin: 0 auto;
+            width: 80%;
+        }
+        button{
+            background: transparent;border: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="warp">
+    <div class="log-q">手机号快捷登录</div>
+    <div class="log borde">账号密码登录</div>
+    <form class="login" action="" style="clear: left">
+        <div ><span>手机号码</span><input class="tel" type="number" placeholder="请输入手机号"></div>
+        <div><span>密码</span><input type="password" id="pass" placeholder="请输入密码"></div>
+        <a href="javascript:void(0)" class="forget">忘记密码？</a>
+
+            <button class="login-sub"  disabled="disabled">登录</button>
+
+    </form>
+    <form class="quikly-login" action="" style="clear: left">
+        <div ><span>手机号码</span><input class="tel" type="number" placeholder="请输入手机号" ></div>
+        <div><span>验证码</span><input type="text" placeholder="请输入验证码" id="num"> <button class="send " type="button" disabled><span style="display:block;height: 100%;border: 1px solid red">发送验证码</span></button></div>
+        <button class="register-sub" id="btn" disabled="disabled">注册</button>
+    </form>
+<div></div>
+    <div class="agreement">
+        <span class="agree"></span>我已阅读并同意 <a href="javascript:void(0)">《用户服务协议》</a>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+<script>
+    //延时点击
+    var _timer = {};
+    function delay_till_last(id, fn, wait) {
+        if (_timer[id]) {
+            window.clearTimeout(_timer[id]);
+            delete _timer[id];
+        }
+        return _timer[id] = window.setTimeout(function() {
+            fn();
+            delete _timer[id];
+        }, wait);
+    }
+   /* $dom.on('click', function() {
+        delay_till_last('id', function() {//注意 id 是唯一的
+            //响应事件
+        }, 100);
+    });*/
+     $(function(){
+      //两种模式切换
+         $('.log-q').click(function(){
+             $(this).addClass('borde').siblings('div').removeClass('borde')
+             $('.quikly-login').css({
+                 display:'block'
+             })
+             $('.login').css({
+                 display:'none'
+             })
+         })
+         $('.log').click(function(){
+             $(this).addClass('borde').siblings('div').removeClass('borde')
+             $('.quikly-login').css({
+                 display:'none'
+             })
+             $('.login').css({
+                 display:'block'
+             })
+         })
+         //================================
+         var flag_tel=false;
+         var flag_num=false;
+         var flag_pass=false;
+         var flag_agr=true;
+         //【当键盘按下后判断tel是否合法
+         $('.quikly-login .tel').keyup(function(){
+             judge_tel();
+         })
+         //【注册点击提交判断验证码是否为‘’
+         $('.register-sub').click(function(){
+             judge_num();
+             judge_tel();
+             judge_agree();
+         })
+         //【点击send上的span
+         $('.send span').click(function(){
+
+             judge_tel();
+
+             if(flag_tel==true ){
+                 //发送ajax进行判断手机号是否注册过成功后执行↓
+                 $(this).remove();
+                 $('.send').text('已发送60')
+                 countdown();
+             }
+         })
+         //【点击send
+         $('.send').click(function(){
+             judge_tel();
+             if(flag_tel==true ){
+                 countdown();
+             }
+         })
+
+         //【当点击协议时判断是否合法
+         $('.agree').click(function(){
+             judge_agree()
+         })
+         //【判断手机号输入是否正确
+         function judge_tel(){
+             var tel_val=$('.quikly-login .tel').val();
+             //标准：首位是一共十一位
+             var reg=new RegExp(/^1[0-9]{10}$/);
+             flag_tel=reg.test(tel_val);
+             if(flag_tel==true){
+                 $('.send').attr('disabled',false)
+
+             }else{
+                 $('.send').attr('disabled',true)
+             }
+         }
+         //【倒计时
+         function countdown(){
+             var i=60;
+             var count=setInterval(function(){
+                 i--;
+                 $('.send').attr('disabled',true).text('已发送'+i);
+             },1000)
+             setTimeout(function(){
+                 clearInterval(count);
+                 $('.send').attr('disabled',false).text('重新发送');
+             },6000)
+         }
+         //【判断验证码是否输入
+         function judge_num(){
+             var num_val=$('.num').val();
+             if(num_val==''||num_val==null){
+                 flag_num=false;
+             }else{
+                 flag_num=true;
+             }
+         }
+         //【判断是否勾选同意
+         function judge_agree(){
+                 if(flag_agr==true){
+                     flag_agr=false;
+                 }else{
+                     flag_agr=true;
+                 }
+         }
+     })
+</script>
+</html>
