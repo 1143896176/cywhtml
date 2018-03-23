@@ -154,9 +154,7 @@
          })
          //【点击send上的span
          $('.send span').click(function(){
-
              judge_tel();
-
              if(flag_tel==true ){
                  //发送ajax进行判断手机号是否注册过成功后执行↓
                  $(this).remove();
@@ -171,7 +169,6 @@
                  countdown();
              }
          })
-
          //【当点击协议时判断是否合法
          $('.agree').click(function(){
              judge_agree()
@@ -184,7 +181,6 @@
              flag_tel=reg.test(tel_val);
              if(flag_tel==true){
                  $('.send').attr('disabled',false)
-
              }else{
                  $('.send').attr('disabled',true)
              }
