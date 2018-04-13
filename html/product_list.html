@@ -1,81 +1,143 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
-		<link rel="stylesheet" href="../css/util.css" />
-		<title>商家列表</title>
-		<style>
-			.footer>div {
-				height: 100%;
-				border: 1px solid red;
-			}
-			
-			.car {
-				width: 40px;
-				height: 40px;
-				margin-left: 20px;
-				border-radius: 50px;
-				position: relative;
-				bottom: 25px;
-				background: #c9ac51;
-				background-image: url(../img/购物车空.png);
-				background-size: 25px;
-				background-position: center;
-				background-repeat: no-repeat;
-			}
-			
-			.footer {
-				background: #2d2d2d;
-				display: flex;
-				
-			}
-			.footer-l{
-				flex:1;
-				width: 100%;
-			}
-			.footer-l>span{
-				line-height: 50px;
-			}
-			.footer-r {
-				width: 110px;
-				background: #333333;
-				text-align: center;
-				line-height: 40px;
-				color: white;
-				font-size: 14px;
-				
-			}
-			
-			
-		</style>
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../css/util.css"/>
+    <link rel="stylesheet" href="../css/style.csss">
+    <title>商家列表</title>
+    <style>
+       /* .footer > div {
+            height: 100%;
+            border: 1px solid red;
+            display: flex;
+            align-items: center;
+        }
 
-	<body>
-		<div>
-			<div class="show-img">
-				<img src="../img/商品展示大图.png">
-			</div>
-			<div class="">
-				<div>
+        .car {
+            width: 40px;
+            height: 40px;
 
-				</div>
+            margin-left: 20px;
+            border-radius: 50px;
+            position: relative;
+            bottom: 25px;
+            background: #c9ac51;
+            background-image: url(../img/购物车空.png);
+            background-size: 25px;
+            background-position: center;
+            background-repeat: no-repeat;
 
-			</div>
-		</div>
-		<div class="footer">
+        }
 
-			<div class="footer-l">
-				<div class="car l-b">
-					<span class=" wam l-b" style="">1</span>
-				</div>
-				<span class="color-w">
-					总计:￥300
-				</span>
-			</div>
-			<div class="footer-r">还差200起送</div>
-		</div>
-	</body>
+        .footer {
+            background: #2d2d2d;
+            display: flex;
+        }
+
+        .footer-l {
+            flex: 1;
+            width: 100%;
+        }
+
+        .footer-l > .color-w {
+
+            border: 1px solid red;
+
+        }
+        .footer-r {
+            width: 110px;
+            background: #333333;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            font-size: 14px;
+
+        }
+
+        .show-img {
+            width: 100%;
+            height: 25%;
+            position:relative;
+        }
+
+        .jieshao {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: 3.5vw ;
+            color:#edf0f2
+        }
+.show-img-font{
+    width:67%;
+    border:1px solid red;
+}
+        .show-img-font>p{
+            width:90% ;
+            padding-bottom: 3%;
+        }
+        .zuan{
+            display: flex;
+            justify-content: left;
+        }
+        .name{
+            font-size: 5vw;
+            color:#edf0f2
+        }
+        .show-name{
+            width: 100%;
+            position: absolute;
+            bottom: -6%;
+        }*/
+    </style>
+</head>
+
+<body>
+<div>
+    <div class="show-img">
+        <img src="../img/商品展示大图.png" width="100%">
+        <div class=" ">
+
+        </div>
+        <div class=" show-name space-no2">
+            <div class="show-img-img">
+                <img src="../img/other/showimg.png" alt="">
+            </div>
+            <div class="show-img-font">
+                <p class="name">登瀛楼</p>
+                <p class="zuan">
+                    <span class="z"></span>
+                    <span class="z"></span>
+                    <span class="z"></span>
+                    <span class="z"></span>
+                    <span class="z"></span>
+                </p>
+                <p class="jieshao ">公告：做餐饮我们是认真的，中高端餐饮只有…</p>
+            </div>
+        </div>
+    </div>
+    <div class="massage">
+        <div>
+            <p><span class="sucsse">首</span><span>新用户首次下单立减300元</span></p>
+            <p><span>6个活动</span><span >▲</span></p>
+        </div>
+        <p></p>
+    </div>
+
+</div>
+<div class="footer">
+    <div class="footer-l">
+        <div class="car l-b">
+            <span class=" wam l-b" style="">1</span>
+        </div>
+        <div class="color-w">
+            总计:￥300
+        </div>
+    </div>
+    <div class="footer-r">还差200起送</div>
+</div>
+</body>
 
 </html>

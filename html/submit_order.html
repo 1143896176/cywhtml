@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="../img/logo.png">
+    <link href="../css/util.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../css/app.min.css">
+    <title>提交订单</title>
+    <style>
+        * {
+            moz-user-select: -moz-none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+<div class="submit-order ">
+    <div class="submit-order-title space-no">
+        <a href="javascript:void(0)"><span class="return"></span></a><span>提交订单</span><span></span>
+    </div>
+    <div class="submit-order-warp">
+        <div class="row-nbsp"></div>
+        <div class="address">
+            <p>收货地址</p>
+            <div class="address-location ">
+                <div class="location"></div>
+                <div class="address-location-c">
+                    <p>美年广场12A09</p>
+                    <p>杨先生 <span> 18618450565</span></p>
+                </div>
+                <span class="right" style="float:right"></span>
+            </div>
+        </div>
+        <div class="time">
+            <span class="l-b">指定送达时间</span>
+            <p class="l-b">2017-10-31 16:00</p><span class="right"></span>
+        </div>
+        <div class="time">
+            <span class="l-b">发票抬头</span>
+            <p class="l-b">杨洋</p><span class="right"></span>
+        </div>
+        <div class="row-nbsp"></div>
+        <div class="time">
+            <span class="l-b">支付方式</span>
+            <p class="l-b">在线支付</p><span class="right"></span>
+        </div>
+        <div class="time">
+            <span class="l-b">使用优惠券</span>
+            <p class="l-b">5元优惠券</p><span class="right"></span>
+        </div>
+        <div class="row-nbsp"></div>
+        <div class="submit-order-list">
+            <div class="submit-order-list-t"><img src="../img/头像.png" alt="" width="18" height="18">
+                <p class="l-b">两室一厅老味道</p><span class="right"></span>
+            </div>
+            <ul>
+                <p class="show-list">123</p>
+                <li value="套餐">套餐1</li>
+                <li value="套餐">套餐2</li>
+                <li value="套餐">套餐3</li>
+                <li value="套餐">套餐4</li>
+            </ul>
+            <p><span>烤鸭(带春饼）</span></p>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery-3.3.1.js"></script>
+<script>
+    $(function () {
+        var flag=true;
+        $('.show-list').click(function () {
+            if(flag==true){
+                $(this).siblings('li').fadeIn("slow");
+                flag=false;
+            }else{
+                $(this).siblings('li').fadeOut("slow");
+                flag=true;
+            }
+
+        })
+    })
+</script>
+</body>
+</html>

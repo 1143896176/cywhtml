@@ -1,0 +1,29 @@
+/*提交订单*/
+.submit-order{background:#eceef3;}
+.submit-order>.submit-order-warp{overflow: scroll}
+.submit-order>.submit-order-warp>div{padding: 0 20px;font-size: 14px;background:#ffffff;border-bottom:1px solid #eceef3; }
+.submit-order>.submit-order-title{background:#383635 ;height:50px;display:flex;align-items: center}
+.submit-order>.submit-order-title>span{color:#f7cc47;font-family:PingFangSC-Regular;font-size:17px; }
+.submit-order>.submit-order-warp>.address{font-size:14px;color:#333333;padding-top: 10px;padding-bottom: 10px;}
+.submit-order>.submit-order-warp>.address>.address-location{width: 100%;font-size:12px;text-align: left;}
+.submit-order>.submit-order-warp>.address .address-location-c{display:inline-block;height: 35px;padding-top: 10px;}
+.submit-order>.submit-order-warp>.time{height:50px;display:flex;flex-flow: row;justify-content:space-between;line-height: 50px;}
+.submit-order>.submit-order-warp>.time>p{width: 100%;text-align: right;}
+.submit-order>.submit-order-warp>.time>span:nth-child(1){min-width: 100px;text-align: left;}
+.submit-order>.submit-order-warp>.row-nbsp{background:#eceef3;height: 10px;}
+.submit-order-list-t{display:flex;align-items: center;padding: 10px 0;}
+.submit-order .show-list{height: 30px;line-height: 30px;}
+.submit-order-list ul{padding-left: 20px;}
+.submit-order-list ul li{display: none;line-height: 25px;}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="../img/logo.png">
+    <link href="../css/util.css" rel="stylesheet" type="text/css"/>
+    <title>Title</title>
+    <style>
+        * {
+            moz-user-select: -moz-none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+
+        .pay-head {
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+            background: #383635;
+        }
+
+        .pay-head > div {
+            width: 50px;
+        }
+
+        .pay-head > .pay-head-c {
+            border: 1px solid red;
+            width: 100%;
+            text-align: center;
+            font-size: 17px;
+            color: #f7cc47;
+        }
+
+        .pay-massage {
+            margin-top: 10px;
+        }
+
+        .pay-massage-l {
+            padding: 0 20px;
+        }
+
+        .pay-massage-r {
+            width: 100%;
+        }
+        .weixin{
+            display:inline-block;
+            width: 18px;
+            height: 18px;
+            background: url("../img/weixinlogo.png")no-repeat center;
+            background-size:contain;
+        }
+    </style>
+</head>
+<body>
+<div class="pay-head">
+    <div class="pay-head-l"><span class="return"></span></div>
+    <div class="pay-head-c">支付订单</div>
+    <div class="pay-head-r">3</div>
+</div>
+<div class="pay-massage space-no">
+    <div class="pay-massage-l">
+        <img src="../img/头像.png" alt="">
+    </div>
+    <div class="pay-massage-r">
+        <p>￥300</p>
+        <span>两室一厅老味道</span>
+    </div>
+</div>
+<div class="pay-body">
+    <div> <span class="weixin"></span><span>微信支付</span> </div>
+    <div></div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+<script>
+
+</script>
+</html>

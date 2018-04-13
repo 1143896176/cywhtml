@@ -7,6 +7,7 @@
 body,
 html {
     height: 100%;
+   /* background: #2c2c2c;*/
 }
 
 li {
@@ -242,9 +243,29 @@ a{
     line-height: 14px;
     color: white;
 }
+.return{
+    display:inline-block;
+    width: 22px;
+    height: 22px;
+    background: url("../img/返回左.png") no-repeat center;
+    background-size: contain;
+}
+.location{
+    display:inline-block;
+    width: 40px;
+    height: 20px;
+    margin-top: 15px;
+    background: url("../img/other/location.png") no-repeat center;
+    background-size: contain;
+}
+.right{
+    display:inline-block;
+    min-width: 20px;
+    height: 14px;
 
-
-
+    background: url("../img/other/right.png") no-repeat center;
+    background-size: contain;
+}
 
 
 
