@@ -9,17 +9,6 @@
     <link href="../css/util.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="../css/app.min.css">
     <title>提交订单</title>
-    <style>
-        * {
-            moz-user-select: -moz-none;
-            -moz-user-select: none;
-            -o-user-select: none;
-            -khtml-user-select: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-    </style>
 </head>
 <body>
 <div class="submit-order ">
@@ -41,20 +30,20 @@
         </div>
         <div class="time">
             <span class="l-b">指定送达时间</span>
-            <p class="l-b">2017-10-31 16:00</p><span class="right"></span>
+            <p class="l-b">2017-10-31 16:00<span class="right"></span></p>
         </div>
         <div class="time">
             <span class="l-b">发票抬头</span>
-            <p class="l-b">杨洋</p><span class="right"></span>
+            <p class="l-b">杨洋<span class="right"></span></p>
         </div>
         <div class="row-nbsp"></div>
         <div class="time">
             <span class="l-b">支付方式</span>
-            <p class="l-b">在线支付</p><span class="right"></span>
+            <p class="l-b">在线支付<span class="right"></span></p>
         </div>
         <div class="time">
             <span class="l-b">使用优惠券</span>
-            <p class="l-b">5元优惠券</p><span class="right"></span>
+            <p class="l-b">5元优惠券<span class="right"></span></p>
         </div>
         <div class="row-nbsp"></div>
         <div class="submit-order-list">
@@ -62,29 +51,79 @@
                 <p class="l-b">两室一厅老味道</p><span class="right"></span>
             </div>
             <ul>
-                <p class="show-list">123</p>
-                <li value="套餐">套餐1</li>
-                <li value="套餐">套餐2</li>
-                <li value="套餐">套餐3</li>
-                <li value="套餐">套餐4</li>
+                <div class="show-list">123<span class="triangle"></span>
+                    <p class="l-b"><span>1x</span><span>￥300</span></p>
+                </div>
+                <li value="套餐">套餐1<p class="l-b"><span>1x</span></p></li>
+                <li value="套餐">套餐2<p class="l-b"><span>1x</span></p></li>
+                <li value="套餐">套餐3<p class="l-b"><span>1x</span></p></li>
+                <li value="套餐">套餐4<p class="l-b"><span>1x</span></p></li>
             </ul>
-            <p><span>烤鸭(带春饼）</span></p>
+            <div class="show-list"><span>烤鸭(带春饼）</span>
+                <p class="l-b"><span>1x</span><span>￥300</span></p>
+            </div>
         </div>
+        <div class="row-nbsp"></div>
+        <div class="time ">
+            <span class="l-b">菜品总价</span>
+            <p class="l-b ">￥428</p>
+        </div>
+        <div class="time ">
+            <span class="l-b">配送服务费<span class="what "></span></span>
+            <p class="l-b ">￥30</p>
+        </div>
+
+        <div class="time ">
+            <span class="l-b">餐具押金</span>
+            <p class="l-b ">￥200</p>
+        </div>
+        <div class="time ">
+            <span class="l-b">侍餐费</span>
+            <p class="l-b p">￥60<span class="select"></span></p>
+        </div>
+
+        <ul class="details">
+            <li><span>收单免减5元</span><span class="color-y2">-￥5</span></li>
+            <li><span>满减10元</span><span class="color-y2">-￥5</span></li>
+            <li><span>满减10元</span><span class="color-y2">-￥5</span></li>
+        </ul>
+        <div class="time ">
+            <span class="l-b"></span>
+            <p class="l-b p">总计: <span class="color-y2">￥300</span></p>
+        </div>
+        <div class="row-nbsp"></div>
+        <div class="time ">
+            <span class="l-b">餐具数量</span>
+            <p class="l-b p"><span class="right"></span></p>
+        </div>
+        <div class="remarks">
+            <span>备注：</span>
+
+            <div contenteditable="true"  class="remarks-context" onfocus="if(this.innerText=='口味、偏好等其他要求')this.innerText=''" onblur="if(this.innerText=='')this.innerText='口味、偏好等其他要求'">口味、偏好等其他要求</div>
+
+        </div>
+        <div class="row-nbsp"></div>
+    </div>
+
+    <div class="submit-order-fotter">
+        <div class="submit-order-fotter-l color-w" >总计: <span class="color-y2">￥300</span></div>
+        <a href="javascript:void(0)">提交订单</a>
     </div>
 </div>
 <script src="../js/jquery-3.3.1.js"></script>
 <script>
     $(function () {
-        var flag=true;
+        var flag = true;
         $('.show-list').click(function () {
-            if(flag==true){
+            if (flag == true) {
+                $(".triangle").css({transform: "rotate(90deg)"})
                 $(this).siblings('li').fadeIn("slow");
-                flag=false;
-            }else{
+                flag = false;
+            } else {
+                $(".triangle").css({transform: "rotate(0deg)"})
                 $(this).siblings('li').fadeOut("slow");
-                flag=true;
+                flag = true;
             }
-
         })
     })
 </script>
