@@ -1,7 +1,7 @@
 /*提交订单*/
 .submit-order{background:#eceef3;}
 .submit-order>.submit-order-warp{overflow: scroll}
-.submit-order>.submit-order-warp>div{padding: 0 20px;font-size: 14px;background:#ffffff;border-bottom:1px solid #eceef3; }
+.submit-order>.submit-order-warp>div{padding: 0 20px;font-size: 14px;background:#ffffff;border-bottom:1px solid #eceef3;z-index:11; }
 .submit-order>.submit-order-title{background:#383635 ;height:50px;display:flex;align-items: center;position: fixed;top:0;left:0;width: 100%;}
 .submit-order>.submit-order-title>span{color:#f7cc47;font-family:PingFangSC-Regular;font-size:17px; }
 .submit-order>.submit-order-warp>.address{font-size:14px;color:#333333;padding-top: 10px;padding-bottom: 10px;}
