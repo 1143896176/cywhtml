@@ -18,7 +18,7 @@
 .submit-order-list .show-list>p{display: inline-block;width: 40%;height: 100%;float: right;display: flex;justify-content: space-between;padding-right: 20px;}
 .submit-order-list ul li>p{text-indent: 0px;width: 40%;height: 100%;float: right;padding-right: 20px;}
 .submit-order-list>.show-list{padding-left: 20px;}
-.submit-order .time .what{position: relative;top:2px;}
+.submit-order .time .what{/*position: relative;top:2px;*/}
 .submit-order .details {padding: 10px 20px;background:#ffffff;border-bottom:1px solid #eceef3;font-size: 13px;color:#666666;}
 .submit-order .details >li{display:flex;justify-content: space-between;line-height: 30px;}
 .submit-order>.submit-order-warp>.remarks{min-height: 90px;padding: 10px 20px;display: flex;flex-flow:row }
