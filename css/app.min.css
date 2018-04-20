@@ -26,7 +26,7 @@
 .submit-order .remarks>.remarks-context:focus{ outline:none;border:1px solid #eceef3;}
 .submit-order .remarks>span{white-space: nowrap;display: inline-block;}
 .submit-order .submit-order-fotter>a{display:inline-block;height:100%;min-width:30%;background: #c9ac51;line-height:50px;color: white;text-align: center;font-size: 14px;}
-.submit-order  .submit-order-fotter{height:50px;display: flex;flex-flow: row;}
+.submit-order  .submit-order-fotter{height:50px;display: flex;flex-flow: row;position: fixed;bottom: 0;width: 100%;}
 .submit-order  .submit-order-fotter-l{background: #2d2d2d;width: 100%;padding-left: 20px;text-align: left;height: 100%;line-height: 50px;}
 
 
