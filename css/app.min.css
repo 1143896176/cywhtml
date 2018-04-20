@@ -2,28 +2,31 @@
 .submit-order{background:#eceef3;}
 .submit-order>.submit-order-warp{overflow: scroll}
 .submit-order>.submit-order-warp>div{padding: 0 20px;font-size: 14px;background:#ffffff;border-bottom:1px solid #eceef3; }
-.submit-order>.submit-order-title{background:#383635 ;height:50px;display:flex;align-items: center}
+.submit-order>.submit-order-title{background:#383635 ;height:50px;display:flex;align-items: center;position: fixed;top:0;left:0;width: 100%;}
 .submit-order>.submit-order-title>span{color:#f7cc47;font-family:PingFangSC-Regular;font-size:17px; }
 .submit-order>.submit-order-warp>.address{font-size:14px;color:#333333;padding-top: 10px;padding-bottom: 10px;}
 .submit-order>.submit-order-warp>.address>.address-location{width: 100%;font-size:12px;text-align: left;}
 .submit-order>.submit-order-warp>.address .address-location-c{display:inline-block;height: 35px;padding-top: 10px;}
-.submit-order>.submit-order-warp>.time{height:50px;display:flex;flex-flow: row;justify-content:space-between;line-height: 50px;}
-.submit-order>.submit-order-warp>.time>p{width: 100%;text-align: right;}
+.submit-order>.submit-order-warp>.time{height:50px;display:flex;flex-flow: row;justify-content:space-between;line-height: 50px;align-items: center;}
+.submit-order>.submit-order-warp>.time>p{;text-align: right;}
 .submit-order>.submit-order-warp>.time>span:nth-child(1){min-width: 100px;text-align: left;}
 .submit-order>.submit-order-warp>.row-nbsp{background:#eceef3;height: 10px;}
 .submit-order-list-t{display:flex;align-items: center;padding: 10px 0;}
 .submit-order .show-list{height: 30px;line-height: 30px;}
 .submit-order-list ul{padding-left: 20px;}
-.submit-order-list ul li{display: none;line-height: 25px;}
-
-
-
-
-
-
-
-
-
-
+.submit-order-list ul li{text-indent: 20px;display: none;line-height: 25px;font-size:11px;color:#666666;}
+.submit-order-list .show-list>p{display: inline-block;width: 40%;height: 100%;float: right;display: flex;justify-content: space-between;padding-right: 20px;}
+.submit-order-list ul li>p{text-indent: 0px;width: 40%;height: 100%;float: right;padding-right: 20px;}
+.submit-order-list>.show-list{padding-left: 20px;}
+.submit-order .time .what{position: relative;top:2px;}
+.submit-order .details {padding: 10px 20px;background:#ffffff;border-bottom:1px solid #eceef3;font-size: 13px;color:#666666;}
+.submit-order .details >li{display:flex;justify-content: space-between;line-height: 30px;}
+.submit-order>.submit-order-warp>.remarks{min-height: 90px;padding: 10px 20px;display: flex;flex-flow:row }
+.submit-order .remarks>.remarks-context{width: 100%; min-height: 55px;max-height: 500px;_height: 55px;border-radius:3px;background:#fbfbfb;border:1px solid #eceef3;font-size: 12px;padding: 5px;}
+.submit-order .remarks>.remarks-context:focus{ outline:none;border:1px solid #eceef3;}
+.submit-order .remarks>span{white-space: nowrap;display: inline-block;}
+.submit-order .submit-order-fotter>a{display:inline-block;height:100%;min-width:30%;background: #c9ac51;line-height:50px;color: white;text-align: center;font-size: 14px;}
+.submit-order  .submit-order-fotter{height:50px;display: flex;flex-flow: row;}
+.submit-order  .submit-order-fotter-l{background: #2d2d2d;width: 100%;padding-left: 20px;text-align: left;height: 100%;line-height: 50px;}
 
 
