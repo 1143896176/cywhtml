@@ -5,129 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="">
     <link rel="stylesheet" href="../css/util.css"/>
-    <link rel="stylesheet" href="../css/style.csss">
-    <title>商家列表</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>商品列表</title>
     <style>
-       /* .footer > div {
-            height: 100%;
-            border: 1px solid red;
-            display: flex;
-            align-items: center;
-        }
 
-        .car {
-            width: 40px;
-            height: 40px;
-
-            margin-left: 20px;
-            border-radius: 50px;
-            position: relative;
-            bottom: 25px;
-            background: #c9ac51;
-            background-image: url(../img/购物车空.png);
-            background-size: 25px;
-            background-position: center;
-            background-repeat: no-repeat;
-
-        }
-
-        .footer {
-            background: #2d2d2d;
-            display: flex;
-        }
-
-        .footer-l {
-            flex: 1;
-            width: 100%;
-        }
-
-        .footer-l > .color-w {
-
-            border: 1px solid red;
-
-        }
-        .footer-r {
-            width: 110px;
-            background: #333333;
-            text-align: center;
-            line-height: 40px;
-            color: white;
-            font-size: 14px;
-
-        }
-
-        .show-img {
-            width: 100%;
-            height: 25%;
-            position:relative;
-        }
-
-        .jieshao {
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            font-size: 3.5vw ;
-            color:#edf0f2
-        }
-.show-img-font{
-    width:67%;
-    border:1px solid red;
-}
-        .show-img-font>p{
-            width:90% ;
-            padding-bottom: 3%;
-        }
-        .zuan{
-            display: flex;
-            justify-content: left;
-        }
-        .name{
-            font-size: 5vw;
-            color:#edf0f2
-        }
-        .show-name{
-            width: 100%;
-            position: absolute;
-            bottom: -6%;
-        }*/
     </style>
 </head>
 
 <body>
-<div>
+<div class="product-list">
     <div class="show-img">
-        <img src="../img/商品展示大图.png" width="100%">
-        <div class=" ">
+        <img src="../img/商品展示大图.png" width="100%" height="100%">
+        <div class="show-bottom ">
+            <div class=" show-name space-no2">
+                <div class="show-img-img">
+                    <img src="../img/other/showimg.png" alt="">
+                </div>
+                <div class="show-img-font">
+                    <p class="name">登瀛楼</p>
+                    <p class="zuan">
+                        <span class="z"></span>
+                        <span class="z"></span>
+                        <span class="z"></span>
+                        <span class="z"></span>
+                        <span class="z"></span>
+                    </p>
+                    <p class="jieshao ">公告：做餐饮我们是认真的，中高端餐饮只有…</p>
+                </div>
+            </div>
+        </div>
 
-        </div>
-        <div class=" show-name space-no2">
-            <div class="show-img-img">
-                <img src="../img/other/showimg.png" alt="">
-            </div>
-            <div class="show-img-font">
-                <p class="name">登瀛楼</p>
-                <p class="zuan">
-                    <span class="z"></span>
-                    <span class="z"></span>
-                    <span class="z"></span>
-                    <span class="z"></span>
-                    <span class="z"></span>
-                </p>
-                <p class="jieshao ">公告：做餐饮我们是认真的，中高端餐饮只有…</p>
-            </div>
-        </div>
     </div>
     <div class="massage">
-        <div>
+        <div class="massgge-1">
             <p><span class="sucsse">首</span><span>新用户首次下单立减300元</span></p>
-            <p><span>6个活动</span><span >▲</span></p>
+            <p><span>6个活动</span><span>▲</span></p>
         </div>
-        <p></p>
+        <p class="massgge-2"><span class="massgge-2-1">商品</span>    </span><span class="massgge-2-2">评价：9.9分</span></p>
+    </div>
+    <div class="set-meal">
+        <ul>
+            <p>套餐</p>
+            <li>凉菜凉菜</li>
+            <li>热菜</li>
+        </ul>
+        <div class="set-meal-warp">
+            <p class="set-meal-warp-1">套餐</p>
+            <ul>
+                <li  >
+                    <img src="../img/other/listbackground.png" alt="" width="70" height="70">
+                    <div >
+                        <p style="font-family:PingFangSC-Medium;font-size:14px;color:#333333;">精选米饭套餐</p>
+                        <p class="menu">精品烤鸭、老城水爆肚、芥末鸭掌 </p>
+                        <p style="font-family:PingFangSC-Regular;
+font-size:11px;
+color:#666666;">销量18</p>
+                        <div>
+                            <p style="font-size: 12px;display: inline-block;">￥<span style="font-size: 14px">290.00</span></p>
+                            <p class="number-car  f-right">
+                                <span class="cut"></span>
+                                <span class="l-b" style="height: 20px;width: 20px;text-align: center;font-size: 14px">5</span>
+                                <span class="add"></span>
+                            </p>
+
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
     </div>
 
 </div>
-<div class="footer">
+<div class="product-list-footer">
     <div class="footer-l">
         <div class="car l-b">
             <span class=" wam l-b" style="">1</span>
@@ -136,7 +88,7 @@
             总计:￥300
         </div>
     </div>
-    <div class="footer-r">还差200起送</div>
+    <div class="footer-r" style="text-align: center;">还差200起送</div>
 </div>
 </body>
 

@@ -59,9 +59,9 @@ a{text-decoration: none;color: #ceab43;}
 .f-left{float: left;}
 .f-right{float: right;}
 .clear{clear: both;}
-
-
-
+/*加减号*/
+.add{display:inline-block;background: url("../img/other/add.png")no-repeat center;background-size: contain;width: 20px;height: 20px;}
+.cut{display:inline-block;background: url("../img/other/cut.png")no-repeat center;background-size: contain;width: 20px;height: 20px;}
 
 
 
