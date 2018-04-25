@@ -152,7 +152,7 @@
             //【添加购物车
             var x_car = $(".car").offset().left;
             var y_car = $(".car").offset().top;
-            p1.push(x_car, y_car);
+            p1.push(x_car+30, y_car);
             //存放car位置
             var p2 = [];
             var x = $(this).offset().left;
@@ -168,7 +168,7 @@
                 Xv = i * v * 0.5;
                 Yv = a * i * i * 2 * 0.25;
                 i++;
-                if (Xv > p2[0] - p1[0]&&Yv>p1[1] - p2[1]) {
+                if (Yv-50>p1[1] - p2[1]) {
                     th.children("span").eq(1).remove();
                    clearInterval(T);
                    console.log(Xv > p2[0] - p1[0])
