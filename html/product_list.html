@@ -140,11 +140,7 @@
     $(function () {
         var span = "<span></span>";
 
-        var p1 = [];
-        //【添加购物车
-        var x_car = $(".car").offset().left;
-        var y_car = $(".car").offset().top;
-        p1.push(x_car, y_car);
+
 
         var carIndex=0;
         $(".add").click(function () {
@@ -152,6 +148,11 @@
             //获取对象
             var th = $(this);
             th.append(span);
+            var p1 = [];
+            //【添加购物车
+            var x_car = $(".car").offset().left;
+            var y_car = $(".car").offset().top;
+            p1.push(x_car, y_car);
             //存放car位置
             var p2 = [];
             var x = $(this).offset().left;
