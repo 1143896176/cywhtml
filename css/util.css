@@ -9,8 +9,7 @@ a {text-decoration: none;}
 .order{display:block;height:20px;width:20px;background: url(../img/首页/信息灰色1x.png)no-repeat center;}
 .footer>li{font-size:10px;}
 /*底部样式↑*/
-.body {
-    min-width: 320px;background: #2c2c2c;width: 100%;position: fixed;top: 40px;bottom: 40px;overflow: scroll;}
+.body {min-width: 320px;background: #2c2c2c;width: 100%;position: fixed;top: 40px;bottom: 40px;overflow: scroll;}
 ::-webkit-scrollbar{display:none;}
 .header { min-width: 320px;width: 100%;height: 40px;position: fixed;top: 0px;color: #f7cc47;background: #383635;}
 .nbsp {margin-left: 10px;}
@@ -48,7 +47,7 @@ a {text-decoration: none;}
 .screen {display: inline-block;width: 13px;height: 13px;background: url(../img/筛选.png);}
 a{text-decoration: none;color: #ceab43;}
 /*警告   红色圆点提示*/
-.wam {width: 14px;height: 14px;border-radius: 50px;background: #d74a42;float: right;font-size: 10px;text-align: center;line-height: 14px;color: white;}
+.wam {width: 16px;height: 16px;border-radius: 50px;background: #d74a42;float: right;font-size: 10px;text-align: center;line-height: 14px;color: white;}
 .return{display:inline-block;width: 22px;height: 22px;background: url("../img/返回左.png") no-repeat center;background-size: contain;}
 .location{display:inline-block;width: 40px;height: 20px;margin-top: 15px;background: url("../img/other/location.png") no-repeat center;background-size: contain;}
 .right{display:inline-block;min-width: 20px;height: 14px;background: url("../img/other/right.png") no-repeat center;background-size: contain;}
@@ -61,6 +60,7 @@ a{text-decoration: none;color: #ceab43;}
 .clear{clear: both;}
 /*加减号*/
 .add{display:inline-block;background: url("../img/other/add.png")no-repeat center;background-size: contain;width: 20px;height: 20px;}
+.add>span{display:inline-block; width: 20px;height: 20px;border-radius: 50%}
 .cut{display:inline-block;background: url("../img/other/cut.png")no-repeat center;background-size: contain;width: 20px;height: 20px;}
 
 

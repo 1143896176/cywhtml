@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b892a85-0510-493a-baee-56ab92c0bf90" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/other/add.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/other/cut.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/other/listbackground.png" />
-      <change beforePath="$PROJECT_DIR$/css/app.min.css" afterPath="$PROJECT_DIR$/css/app.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/一次方程计算kc.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/二元一次方程计算.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test2.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test3.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test4.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change beforePath="$PROJECT_DIR$/css/util.css" afterPath="$PROJECT_DIR$/css/util.css" />
       <change beforePath="$PROJECT_DIR$/html/product_list.html" afterPath="$PROJECT_DIR$/html/product_list.html" />
@@ -22,21 +24,90 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="product_list.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="product_list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/product_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-263">
-              <caret line="60" column="60" lean-forward="true" selection-start-line="60" selection-start-column="60" selection-end-line="60" selection-end-column="60" />
+            <state relative-caret-position="906">
+              <caret line="171" column="41" lean-forward="true" selection-start-line="171" selection-start-column="41" selection-end-line="171" selection-end-column="41" />
               <folding>
+                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#2;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#p#1;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#p#1;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#p#1;n#div#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/style.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test4.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test4.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="90" column="27" lean-forward="true" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#p#1;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="一次方程计算kc.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/一次方程计算kc.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="二元一次方程计算.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/二元一次方程计算.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test2.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+              <folding>
+                <element signature="e#2074#2081#0" expanded="true" />
+                <element signature="e#8528#10213#0" expanded="false" />
+                <element signature="e#10458#10615#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test3.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test3.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="64" column="32" lean-forward="true" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -44,18 +115,18 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="312" column="0" lean-forward="false" selection-start-line="312" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
+            <state relative-caret-position="223">
+              <caret line="311" column="144" lean-forward="true" selection-start-line="311" selection-start-column="144" selection-end-line="311" selection-end-column="144" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="util.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="util.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/util.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1890">
-              <caret line="63" column="129" lean-forward="false" selection-start-line="63" selection-start-column="129" selection-end-line="63" selection-end-column="129" />
+            <state relative-caret-position="88">
+              <caret line="49" column="151" lean-forward="true" selection-start-line="49" selection-start-column="151" selection-end-line="49" selection-end-column="151" />
               <folding />
             </state>
           </provider>
@@ -66,9 +137,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -170,9 +241,14 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/html/submit_order.html" />
         <option value="$PROJECT_DIR$/css/app.min.css" />
-        <option value="$PROJECT_DIR$/css/util.css" />
-        <option value="$PROJECT_DIR$/html/product_list.html" />
+        <option value="$PROJECT_DIR$/test2.html" />
+        <option value="$PROJECT_DIR$/test3.html" />
+        <option value="$PROJECT_DIR$/js/一次方程计算kc.js" />
+        <option value="$PROJECT_DIR$/test4.html" />
+        <option value="$PROJECT_DIR$/js/二元一次方程计算.js" />
         <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/html/product_list.html" />
+        <option value="$PROJECT_DIR$/css/util.css" />
       </list>
     </option>
   </component>
@@ -188,7 +264,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -212,6 +288,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -232,33 +310,19 @@
             <path>
               <item name="cywhtml" type="b2602c69:ProjectViewProjectNode" />
               <item name="cywhtml" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cywhtml" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cywhtml" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="other" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cywhtml" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cywhtml" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="我的" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -289,8 +353,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gulp.js.default">
+  <component name="RunManager" selected="Node.js.二元一次方程计算.js">
     <configuration name="pay.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cywhtml/html/pay.html" />
+    <configuration name="product_list.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cywhtml/html/product_list.html" />
+    <configuration name="二元一次方程计算.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="二元一次方程计算.js" working-dir="$PROJECT_DIR$/js" />
+    <configuration name="一次方程计算kc.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="一次方程计算kc.js" working-dir="$PROJECT_DIR$/js" />
     <configuration name="default" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -301,14 +368,20 @@
       <arguments />
       <envs />
     </configuration>
-    <list size="2">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.pay.html" />
       <item index="1" class="java.lang.String" itemvalue="Gulp.js.default" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.一次方程计算kc.js" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.product_list.html" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.二元一次方程计算.js" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Gulp.js.default" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.pay.html" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.二元一次方程计算.js" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.product_list.html" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.一次方程计算kc.js" />
+        <item index="3" class="java.lang.String" itemvalue="Gulp.js.default" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.pay.html" />
       </list>
     </recent_temporary>
   </component>
@@ -355,6 +428,10 @@
       <workItem from="1524453702380" duration="1669000" />
       <workItem from="1524463935918" duration="5160000" />
       <workItem from="1524475048391" duration="1198000" />
+      <workItem from="1524532929390" duration="595000" />
+      <workItem from="1524535245657" duration="117000" />
+      <workItem from="1524536398915" duration="19544000" />
+      <workItem from="1524617910188" duration="24283000" />
     </task>
     <task id="LOCAL-00001" summary="首减样式更改">
       <created>1520832642655</created>
@@ -689,16 +766,16 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237408000" />
+    <option name="totallyTimeSpent" value="281947000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11713031" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16032211" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -748,45 +825,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/submit_order.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="119" column="13" lean-forward="true" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/other/location.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/我的/0FC107C1-88FF-42E9-B10F-DDD7D5ECF4CA@3x.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/我的/73EFDA4F-4105-4B64-A789-9CE689F2C3A0@3x.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/我的/3C50272F-596A-4CC3-847A-0CE9DEED496A@3x.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/我的/卡券.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/我的/发票.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -994,36 +1032,101 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/util.css">
+    <entry file="file://$PROJECT_DIR$/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="63" column="129" lean-forward="false" selection-start-line="63" selection-start-column="129" selection-end-line="63" selection-end-column="129" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="64" column="32" lean-forward="true" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding>
+            <element signature="e#2074#2081#0" expanded="true" />
+            <element signature="e#8528#10213#0" expanded="false" />
+            <element signature="e#10458#10615#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/二元一次方程计算.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/一次方程计算kc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="90" column="27" lean-forward="true" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#p#1;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/style.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="312" column="0" lean-forward="false" selection-start-line="312" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
+        <state relative-caret-position="223">
+          <caret line="311" column="144" lean-forward="true" selection-start-line="311" selection-start-column="144" selection-end-line="311" selection-end-column="144" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/product_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-263">
-          <caret line="60" column="60" lean-forward="true" selection-start-line="60" selection-start-column="60" selection-end-line="60" selection-end-column="60" />
+        <state relative-caret-position="906">
+          <caret line="171" column="41" lean-forward="true" selection-start-line="171" selection-start-column="41" selection-end-line="171" selection-end-column="41" />
           <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#2;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#1;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#p#1;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#p#1;n#div#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/util.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="49" column="151" lean-forward="true" selection-start-line="49" selection-start-column="151" selection-end-line="49" selection-end-column="151" />
+          <folding />
         </state>
       </provider>
     </entry>

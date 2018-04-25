@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="css/util.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>商品列表</title>
+    <style>
+.sfgho{
+
+}
+    </style>
+</head>
+
+<body>
+<div class="product-list">
+
+    <div class="set-meal">
+        <div class="set-meal-warp">
+            <p class="set-meal-warp-1">套餐</p>
+            <ul>
+                <li>
+                    <div class="menu-warp1">
+                        <p style="font-size:14px;color:#333333;">精选米饭套餐</p>
+                        <p class="menu" style=" white-space:nowrap;text-overflow:ellipsis;overflow:hidden;">
+                            精品烤鸭、老城水爆肚、芥末鸭掌 </p>
+                        <p style="font-size:11px;color:#666;">销量18</p>
+                        <div>
+                            <p style="font-size: 12px;display: inline-block;">￥<span
+                                    style="font-size: 14px">290.00</span></p>
+                            <p class="number-car  f-right">
+                                <span class="cut"></span>
+                                <span class="l-b"
+                                      style="height: 20px;width: 20px;text-align: center;font-size: 14px">5</span>
+                                <span class="add "><span></span></span>
+                            </p>
+
+                        </div>
+                    </div>
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div class="product-list-footer">
+    <div class="footer-l">
+        <div class="car l-b">
+            <span class=" wam l-b" style="">1</span>
+        </div>
+        <div class="color-w">
+            总计:￥300
+        </div>
+    </div>
+    <div class="footer-r" style="text-align: center;">还差200起送</div>
+</div>
+<script src="js/jquery-3.3.1.js" charset="utf-8"></script>
+<script>
+    $(function () {
+        var t,v;
+        var p2=[];
+        //【添加购物车
+        var x_car = $(".car").offset().left;
+        var y_car = $(".car").offset().top;
+        p2.push(x_car,y_car);
+
+        console.log('x_car:' + x_car, 'y_car:' + y_car);
+
+        $(".add").click(function () {
+            var p1=[];
+            var x = $(this).offset().left;
+            var y = $(this).offset().top;
+            p1.push(x,y);
+            var Xv,Yv,k,c;
+            k=(p1[1]-p2[1])/(p1[0]-p2[0]);
+            console.log("k:"+k);
+            c= p1[1]-k*p1[0];
+            console.log("c:"+c);
+
+            var i =0;
+            var T=setInterval(function(){
+                //S(x)=S(x0)+vt
+                Xv=i*5;
+                //S(y)=S(y0)+vt
+                Yv=(Xv)*-k;
+                $(".add").children("span").css({background:"#FF0000",transform: "translate("+-Xv+"px, "+Yv+"px)" })
+                i++;
+            },1000)
+
+        })
+
+    })
+</script>
+</body>
+
+</html>
