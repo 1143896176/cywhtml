@@ -20,8 +20,8 @@
       <file leaf-file-name="product_list.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/product_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="170" column="22" lean-forward="false" selection-start-line="170" selection-start-column="22" selection-end-line="170" selection-end-column="22" />
+            <state relative-caret-position="103">
+              <caret line="129" column="60" lean-forward="false" selection-start-line="129" selection-start-column="60" selection-end-line="129" selection-end-column="60" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -36,6 +36,8 @@
                 <element signature="n#style#0;n#span#1;n#p#1;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#p#1;n#div#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -437,14 +439,7 @@
       <workItem from="1524532929390" duration="595000" />
       <workItem from="1524535245657" duration="117000" />
       <workItem from="1524536398915" duration="19544000" />
-      <workItem from="1524617910188" duration="26656000" />
-    </task>
-    <task id="LOCAL-00008" summary="限制页面缓存">
-      <created>1520835460267</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1520835460267</updated>
+      <workItem from="1524617910188" duration="26837000" />
     </task>
     <task id="LOCAL-00009" summary="限制页面缓存">
       <created>1520835513479</created>
@@ -782,11 +777,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524648627561</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="商品列表页添加动画未完成">
+      <created>1524648702035</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1524648702035</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284320000" />
+    <option name="totallyTimeSpent" value="284501000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1137,8 +1139,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/product_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="170" column="22" lean-forward="false" selection-start-line="170" selection-start-column="22" selection-end-line="170" selection-end-column="22" />
+        <state relative-caret-position="103">
+          <caret line="129" column="60" lean-forward="false" selection-start-line="129" selection-start-column="60" selection-end-line="129" selection-end-column="60" />
           <folding>
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1153,6 +1155,8 @@
             <element signature="n#style#0;n#span#1;n#p#1;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#p#1;n#div#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
