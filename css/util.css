@@ -47,7 +47,7 @@ a {text-decoration: none;}
 .screen {display: inline-block;width: 13px;height: 13px;background: url(../img/筛选.png);}
 a{text-decoration: none;color: #ceab43;}
 /*警告   红色圆点提示*/
-.wam {width: 16px;height: 16px;border-radius: 50px;background: #d74a42;float: right;font-size: 10px;text-align: center;line-height: 14px;color: white;}
+.wam {width: 16px;height: 16px;border-radius: 50px;background: #d74a42;float: right;font-size: 10px;text-align: center;line-height: 16px;color: white;}
 .return{display:inline-block;width: 22px;height: 22px;background: url("../img/返回左.png") no-repeat center;background-size: contain;}
 .location{display:inline-block;width: 40px;height: 20px;margin-top: 15px;background: url("../img/other/location.png") no-repeat center;background-size: contain;}
 .right{display:inline-block;min-width: 20px;height: 14px;background: url("../img/other/right.png") no-repeat center;background-size: contain;}

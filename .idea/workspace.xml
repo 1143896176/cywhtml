@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b892a85-0510-493a-baee-56ab92c0bf90" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/一次方程计算kc.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/二元一次方程计算.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test2.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test3.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test4.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change beforePath="$PROJECT_DIR$/css/util.css" afterPath="$PROJECT_DIR$/css/util.css" />
-      <change beforePath="$PROJECT_DIR$/html/product_list.html" afterPath="$PROJECT_DIR$/html/product_list.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -431,7 +424,7 @@
       <workItem from="1524532929390" duration="595000" />
       <workItem from="1524535245657" duration="117000" />
       <workItem from="1524536398915" duration="19544000" />
-      <workItem from="1524617910188" duration="24283000" />
+      <workItem from="1524617910188" duration="24574000" />
     </task>
     <task id="LOCAL-00001" summary="首减样式更改">
       <created>1520832642655</created>
@@ -762,11 +755,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524195383610</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="商品列表页添加动画未完成">
+      <created>1524646351843</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1524646351843</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="281947000" />
+    <option name="totallyTimeSpent" value="282238000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -816,7 +816,8 @@
     <MESSAGE value="添加了" />
     <MESSAGE value="添加了订单支付页" />
     <MESSAGE value="添加了订单支付页&#10;头部样式" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了订单支付页&#10;头部样式" />
+    <MESSAGE value="商品列表页添加动画未完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="商品列表页添加动画未完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
