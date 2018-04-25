@@ -168,7 +168,7 @@
                 Xv = i * v * 0.5;
                 Yv = a * i * i * 2 * 0.25;
                 i++;
-                if (Yv-50>p1[1] - p2[1]) {
+                if (Yv>p1[1] - p2[1]) {
                     clearInterval(T);
                     th.children("span").eq(0).remove();
 
