@@ -169,8 +169,9 @@
                 Yv = a * i * i * 2 * 0.25;
                 i++;
                 if (Yv-50>p1[1] - p2[1]) {
-                    th.children("span").eq(1).remove();
-                   clearInterval(T);
+                    clearInterval(T);
+                    th.children("span").eq(0).remove();
+
                    console.log(Xv > p2[0] - p1[0])
                 } else {
                     th.children("span").eq(0).css({
