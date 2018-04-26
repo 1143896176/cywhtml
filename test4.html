@@ -16,27 +16,29 @@
     </style>
 </head>
 
-<body>
-<div class="product-list">
+<body >
+<div class="product-list" id="app" >
 
     <div class="set-meal">
         <div class="set-meal-warp">
             <p class="set-meal-warp-1">套餐</p>
             <ul>
-                <li>
+                <li v-for="(item ,index) in products">
                     <div class="menu-warp1">
-                        <p style="font-size:14px;color:#333333;">精选米饭套餐</p>
+                        <p style="font-size:14px;color:#333333;">
+                            {{item.pro_name}}
+                            <!--精选米饭套餐--></p>
                         <p class="menu" style=" white-space:nowrap;text-overflow:ellipsis;overflow:hidden;">
-                            精品烤鸭、老城水爆肚、芥末鸭掌 </p>
-                        <p style="font-size:11px;color:#666;">销量18</p>
+                            {{item.pro_menu}} </p>
+                        <p style="font-size:11px;color:#666;">销量{{item.pro_sales}}</p>
                         <div>
                             <p style="font-size: 12px;display: inline-block;">￥<span
-                                    style="font-size: 14px">290.00</span></p>
+                                    style="font-size: 14px">{{item.pro_pries}}</span></p>
                             <p class="number-car  f-right">
-                                <span class="cut"></span>
+                                <span class="cut" @click="item.pro_num>0?item.pro_num--:''"></span>
                                 <span class="l-b"
-                                      style="height: 20px;width: 20px;text-align: center;font-size: 14px">5</span>
-                                <span class="add "><span></span></span>
+                                      style="height: 20px;width: 20px;text-align: center;font-size: 14px" >{{item.pro_num}}</span>
+                                <span class="add " @click="item.pro_num++"><span></span></span>
                             </p>
 
                         </div>
@@ -46,6 +48,11 @@
 
             </ul>
         </div>
+        <ul id="example-1">
+            <li v-for="item in products">
+                {{ item.pro_name }}
+            </li>
+        </ul>
     </div>
 
 </div>
@@ -60,42 +67,72 @@
     </div>
     <div class="footer-r" style="text-align: center;">还差200起送</div>
 </div>
+<script src="js/vue.js"></script>
 <script src="js/jquery-3.3.1.js" charset="utf-8"></script>
 <script>
     $(function () {
-        var t,v;
-        var p2=[];
-        //【添加购物车
-        var x_car = $(".car").offset().left;
-        var y_car = $(".car").offset().top;
-        p2.push(x_car,y_car);
+        var vm=new Vue({
+            el:"#app",
+            data:{
+                products:[
+                    { 'pro_name':'精选米饭套餐',
+                      'pro_menu':'精品烤鸭、老城水爆肚、芥末鸭掌',
+                        'pro_sales':'0',
+                        'pro_pries':'29.00',
+                        'pro_num':'0'
+                    },
+                    { 'pro_name':'精选米饭套餐',
+                        'pro_menu':'精品烤鸭、老城水爆肚、芥末鸭掌',
+                        'pro_sales':'18',
+                        'pro_pries':'29.00',
+                        'pro_num':'0'
+                    }
+                ]
+            }
+        });
 
-        console.log('x_car:' + x_car, 'y_car:' + y_car);
+            var span = "<span></span>";
+            var carIndex=0;
+            $(".add").click(function () {
+                carIndex++;
+                //获取对象
+                var th = $(this);
+                th.append(span);
+                var p1 = [];
+                //【添加购物车
+                var x_car = $(".car").offset().left;
+                var y_car = $(".car").offset().top;
+                p1.push(x_car+30, y_car);
+                //存放car位置
+                var p2 = [];
+                var x = $(this).offset().left;
+                var y = $(this).offset().top;
+                p2.push(x, y);
+                //定义参数
+                var Xv, Yv, t, v, a = 5;
+                t = Math.sqrt((p1[1] - p2[1]) / a / 2);
 
-        $(".add").click(function () {
-            var p1=[];
-            var x = $(this).offset().left;
-            var y = $(this).offset().top;
-            p1.push(x,y);
-            var Xv,Yv,k,c;
-            k=(p1[1]-p2[1])/(p1[0]-p2[0]);
-            console.log("k:"+k);
-            c= p1[1]-k*p1[0];
-            console.log("c:"+c);
+                v = (p2[0] - p1[0]) / t;
+                var i = 0;
+                var T = setInterval(function () {
+                    Xv = i * v * 0.5;
+                    Yv = a * i * i * 2 * 0.25;
+                    i++;
+                    if (Yv>p1[1] - p2[1]) {
+                        clearInterval(T);
+                        th.children("span").eq(0).remove();
+                        console.log(Xv > p2[0] - p1[0])
+                    } else {
+                        th.children("span").eq(0).css({
+                            background: "#FF0000",
+                            transform: "translate(" + -Xv + "px," + Yv + "px)"});
+                       /* th.siblings(".l-b").text(carIndex);*/
+                        $(".product-list-footer .wam").text(carIndex);
+                    }
+                }, 30);
 
-            var i =0;
-            var T=setInterval(function(){
-                //S(x)=S(x0)+vt
-                Xv=i*5;
-                //S(y)=S(y0)+vt
-                Yv=(Xv)*-k;
-                $(".add").children("span").css({background:"#FF0000",transform: "translate("+-Xv+"px, "+Yv+"px)" })
-                i++;
-            },1000)
-
+            })
         })
-
-    })
 </script>
 </body>
 

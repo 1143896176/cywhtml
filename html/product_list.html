@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="../css/utils.css"/>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/vue.js"></script>
+    <script src="../js/jquery-3.3.1.js" charset="utf-8"></script>
     <title>商品列表</title>
     <style>
 
@@ -15,7 +17,7 @@
 </head>
 
 <body>
-<div class="product-list">
+<div class="product-list" id="app">
     <div class="show-img">
         <img src="../img/商品展示大图.png" width="100%" height="100%">
         <div class="show-bottom ">
@@ -54,95 +56,112 @@
         <div class="set-meal-warp">
             <p class="set-meal-warp-1">套餐</p>
             <ul>
-                <li>
+                <li v-for="(item ,index) in products">
                     <img src="../img/other/listbackground.png" alt="" width="70" height="70">
                     <div class="menu-warp1">
-                        <p style="font-size:14px;color:#333333;">精选米饭套餐</p>
+                        <p style="font-size:14px;color:#333333;">{{item.pro_name}}</p>
                         <p class="menu"
                            style="max-width:80%; white-space:nowrap;text-overflow:ellipsis;overflow:hidden;">
-                            精品烤鸭、老城水爆肚、芥末鸭掌 </p>
-                        <p style="font-size:11px;color:#666;">销量18</p>
+                            {{item.pro_menu}} </p>
+                        <p style="font-size:11px;color:#666;">销量{{item.pro_sales}}</p>
                         <div>
                             <p style="font-size: 12px;display: inline-block;">￥<span
-                                    style="font-size: 14px">290.00</span></p>
+                                    style="font-size: 14px">{{item.pro_pries}}</span></p>
                             <p class="number-car  f-right">
-                                <span class="cut"></span>
+                                <span class="cut" @click="item.pro_num>0?item.pro_num--:''"></span>
                                 <span class="l-b"
-                                      style="height: 20px;width: 20px;text-align: center;font-size: 14px;line-height: 20px;">0</span>
-                                <span class="add "></span>
+                                      style="height: 20px;width: 20px;text-align: center;font-size: 14px;line-height: 20px;">{{item.pro_num}}</span>
+                                <span class="add " @click="item.pro_num++"></span>
                             </p>
 
                         </div>
                     </div>
 
                 </li>
-                <li>
-                    <img src="../img/other/listbackground.png" alt="" width="70" height="70">
-                    <div class="menu-warp1">
-                        <p style="font-size:14px;color:#333333;">精选米饭套餐</p>
-                        <p class="menu" style=" white-space:nowrap;text-overflow:ellipsis;overflow:hidden;">
-                            精品烤鸭、老城水爆肚、芥末鸭掌 </p>
-                        <p style="font-size:11px;color:#666;">销量18</p>
-                        <div>
-                            <p style="font-size: 12px;display: inline-block;">￥<span
-                                    style="font-size: 14px">290.00</span></p>
-                            <p class="number-car  f-right">
-                                <span class="cut"></span>
-                                <span class="l-b"
-                                      style="height: 20px;width: 20px;text-align: center;font-size: 14px;line-height: 20px;">0</span>
-                                <span class="add"></span>
-                            </p>
 
-                        </div>
-                    </div>
-
-                </li>
-                <li>
-                    <img src="../img/other/listbackground.png" alt="" width="70" height="70">
-                    <div class="menu-warp1">
-                        <p style="font-size:14px;color:#333333;">精选米饭套餐</p>
-                        <p class="menu" style=" white-space:nowrap;text-overflow:ellipsis;overflow:hidden;">
-                            精品烤鸭、老城水爆肚、芥末鸭掌 </p>
-                        <p style="font-size:11px;color:#666;">销量18</p>
-                        <div>
-                            <p style="font-size: 12px;display: inline-block;color:#c9ac51;">￥<span
-                                    style="font-size: 14px">290.00</span></p>
-                            <p class="number-car  f-right">
-                                <span class="cut"></span>
-                                <span class="l-b"
-                                      style="height: 20px;width: 20px;text-align: center;font-size: 14px;line-height: 20px;">0</span>
-                                <span class="add"></span>
-                            </p>
-
-                        </div>
-                    </div>
-
-                </li>
             </ul>
         </div>
     </div>
-
+    <div class="product-list-footer">
+        <div class="footer-l">
+            <div class="car l-b">
+                <span class=" wam l-b" style="line-height: 16px;">{{GetAllpries.allnum}}</span>
+            </div>
+            <div class="color-w">
+                总计:￥{{GetAllpries.allprise}}
+            </div>
+        </div>
+        <div class="footer-r" style="text-align: center;">还差200起送</div>
+    </div>
 </div>
 <div style="height:50px;"></div>
-<div class="product-list-footer">
-    <div class="footer-l">
-        <div class="car l-b">
-            <span class=" wam l-b" style="line-height: 16px;">0</span>
-        </div>
-        <div class="color-w">
-            总计:￥300
-        </div>
-    </div>
-    <div class="footer-r" style="text-align: center;">还差200起送</div>
-</div>
-<script src="../js/jquery-3.3.1.js" charset="utf-8"></script>
+
+
 <script>
+
     $(function () {
+        var vm=new Vue({
+            el:"#app",
+            data:{
+                products:[
+                    { 'pro_name':'精选米饭套餐',
+                        'pro_menu':'精品烤鸭、老城水爆肚、芥末鸭掌',
+                        'pro_sales':'0',
+                        'pro_pries':29.00,
+                        'pro_num':0
+                    },
+                    { 'pro_name':'精选米饭套餐',
+                        'pro_menu':'精品烤鸭、老城水爆肚、芥末鸭掌',
+                        'pro_sales':'18',
+                        'pro_pries':29.01,
+                        'pro_num':0
+                    },
+                    { 'pro_name':'精选米饭套餐',
+                        'pro_menu':'精品烤鸭、老城水爆肚、芥末鸭掌',
+                        'pro_sales':'18',
+                        'pro_pries':29.01,
+                        'pro_num':0
+                    }
+                ]
+            },
+            computed:{
+                GetAllpries:function(){
+                    var allprise=0.0;
+                    var allnum=0;
+                    for(var i=0;i<this.products.length;i++){
+                        var prise=(this.products[i].pro_pries*this.products[i].pro_num)
+                        prise2=parseInt(prise*10)/10;
+                        allprise+=prise2;
+                        allnum+=this.products[i].pro_num;
+                    }
+                    return {allprise:allprise.toFixed(1),allnum:allnum}
+                },
+                product:function(){
+                    return this.products;
+                }
+            },
+            watch: {
+
+               /* skuShow: 'get_item_sku',*/
+               /* "products": {
+                    handler: function(newVal, oldVal) {
+
+                        for (var i = 0; i < newVal.length; i++) {
+                            if (oldVal[i].pro_num === newVal[i].pro_num) {
+                                console.log(oldVal[i].pro_num === newVal[i].pro_num)
+                                console.log(newVal[i].pro_num )
+                            }
+                        }
+                    },
+                     deep: true,
+                }*/
+               product:{handler:function(newValue, oldValue){
+                   console.log(newValue)
+               }},deep: true,
+            },
+        });
         var span = "<span></span>";
-
-
-
-        var carIndex=0;
+         var carIndex=0;
         $(".add").click(function () {
             carIndex++;
             //获取对象
@@ -171,20 +190,20 @@
                 if (Yv>p1[1] - p2[1]) {
                     clearInterval(T);
                     th.children("span").eq(0).remove();
-
-                   console.log(Xv > p2[0] - p1[0])
+                  /* console.log(Xv > p2[0] - p1[0])*/
                 } else {
                     th.children("span").eq(0).css({
                         background: "#FF0000",
                         transform: "translate(" + -Xv + "px," + Yv + "px)"});
-                    th.siblings(".l-b").text(carIndex);
-                    $(".product-list-footer .wam").text(carIndex);
+                   /* th.siblings(".l-b").text(carIndex);*/
+                   /* $(".product-list-footer .wam").text(carIndex);*/
                 }
             }, 30);
 
         })
     })
 </script>
+
 </body>
 
 </html>
