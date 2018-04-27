@@ -1,31 +1,36 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport"
           content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
-
-    <link rel="stylesheet" href="../css/utils.css"/>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/vue.js"></script>
-    <script src="../js/jquery-3.3.1.js" charset="utf-8"></script>
-    <title>商品列表</title>
+    <link rel="stylesheet" href="css/utils.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/vue.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <title>$Title$</title>
     <style>
-
+        * {
+            moz-user-select: -moz-none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
     </style>
 </head>
-
 <body>
-<div class="allselect" style="width:100px;height:100px;background: red;"></div>
-
 <div class="product-list" id="app">
+    <div class="allselect" style="width:100px;height:100px;background: red;"></div>
     <div class="show-img">
-        <img src="../img/商品展示大图.png" width="100%" height="100%">
+        <img src="img/商品展示大图.png" width="100%" height="100%">
         <div class="show-bottom ">
             <div class=" show-name space-no2">
                 <div class="show-img-img">
-                    <img src="../img/other/showimg.png" alt="">
+                    <img src="img/other/showimg.png" alt="">
                 </div>
                 <div class="show-img-font">
                     <p class="name">登瀛楼</p>
@@ -59,7 +64,7 @@
             <p class="set-meal-warp-1">套餐</p>
             <ul>
                 <li v-for="(item ,index) in products">
-                    <img src="../img/other/listbackground.png" alt="" width="70" height="70">
+                    <img src="img/other/listbackground.png" alt="" width="70" height="70">
                     <div class="menu-warp1">
                         <p style="font-size:14px;color:#333333;">{{item.pro_name}}</p>
                         <p class="menu"
@@ -70,11 +75,11 @@
                             <p style="font-size: 12px;display: inline-block;">￥<span
                                     style="font-size: 14px">{{item.pro_pries}}</span></p>
                             <p class="number-car  f-right">
-                                <span class="cut" @click="item.pro_num>0?item.pro_num--:''"></span>
+                                <span class="cut" @click="item.pro_num>0?item.pro_num--:'';getIsOk(index)"></span>
                                 <span class="l-b"
                                       style="height: 20px;width: 20px;text-align: center;font-size: 14px;line-height: 20px;">{{item.pro_num}}</span>
-                                <span class="add " @click="item.pro_num++"@click="
-"></span>
+                                <span class="add " @click="getIndex(index);item.pro_num++"
+                                ></span>
                             </p>
 
                         </div>
@@ -99,14 +104,11 @@
 </div>
 <div style="height:50px;"></div>
 
+<script src="js/vue.js"></script>
 <script>
 
-    $(function () {
-        $(".allselect").click(function(){
-            $(".add").click();
-        })
-        var vm=new Vue({
-            el:"#app",
+    var vm = new Vue({
+            el: "#app",
             data: {
                 products: [
                     {
@@ -1362,93 +1364,100 @@
                 ],
                 addCar: []
             },
-            computed:{
-
-                GetAllpries:function(){
-
-                    console.log(new Date().getTime())
-                    var allprise=0.0;
-                    var allnum=0;
-                    for(var i=0;i<this.products.length;i++){
-                        var prise=(this.products[i].pro_pries*this.products[i].pro_num)
-                        prise2=parseInt(prise*10)/10;
-                        allprise+=prise2;
-                        allnum+=this.products[i].pro_num;
+            methods: {
+                test: function est() {
+                    Function.prototype.before = function (beforefn) {
+                        var _self = this;                           // 保存原函数的引用
+                        return function () {                      // 返回包含了原函数和新函数的"代理"函数
+                            beforefn.apply(this, arguments);     // 执行新函数，修正this
+                            return _self.apply(this, arguments);// 执行原函数
+                        }
                     }
-                    console.log(new Date().getTime())
-                    return {allprise:allprise.toFixed(1),allnum:allnum}
+                    Function.prototype.after = function (afterfn) {
+                        var _self = this;
+                        return function () {
+                            var ret = _self.apply(this, arguments);
+                            afterfn.apply(this, arguments);
+                            return ret;
+                        }
+                    }
+                    getIsOk=getIsOk.before(console.log(new Date().getTime())).after(console.log(new Date().getTime()))
+                },
+                getIndex: function (index) {
+                    if (this.addCar[index] == null) {
+                        this.addCar.push(index);
+                    }
+
+                },
+                getIsOk: function (val) {
+                    Function.prototype.before = function (beforefn) {
+                        var _self = this;                           // 保存原函数的引用
+                        return function () {                      // 返回包含了原函数和新函数的"代理"函数
+                            beforefn.apply(this, arguments);     // 执行新函数，修正this
+                            return _self.apply(this, arguments);// 执行原函数
+                        }
+                    }
+                    Function.prototype.after = function (afterfn) {
+                        var _self = this;
+                        return function () {
+                            var ret = _self.apply(this, arguments);
+                            afterfn.apply(this, arguments);
+                            return ret;
+                        }
+                    }
+                    RemoveValByIndex = RemoveValByIndex.before(function () {
+
+                    }).after(function () {
+
+                    })
+
+                    function RemoveValByIndex(arr, index) {
+                        arr.splice(index, 1);
+                    }
+
+                    //console.log(this.products[val].pro_num)
+                    if (this.products[val].pro_num == 0) {
+
+                        RemoveValByIndex(this.addCar, val)
+                        //console.log(this.addCar);
+                    }
+
+
                 },
 
             },
-            watch: {
+            computed:
+                {
 
-               /* skuShow: 'get_item_sku',*/
-               /* "products": {
-                    handler: function(newVal, oldVal) {
+                    GetAllpries: function () {
+                        console.log(new Date().getTime())
+                        var allprise = 0.0;
+                        var allnum = 0;
 
-                        for (var i = 0; i < newVal.length; i++) {
-                            if (oldVal[i].pro_num === newVal[i].pro_num) {
-                                console.log(oldVal[i].pro_num === newVal[i].pro_num)
-                                console.log(newVal[i].pro_num )
-                            }
+                        for (var i = 0; i < this.addCar.length; i++) {
+                            var index = this.addCar[i]
+                            var prise = (this.products[index].pro_pries * this.products[index].pro_num)
+                            prise2 = parseInt(prise * 10) / 10;
+                            allprise += prise2;
+                            allnum += this.products[index].pro_num;
                         }
-                    },
-                     deep: true,
-                }*/
+                        console.log(new Date().getTime())
+                        return {allprise: allprise.toFixed(1), allnum: allnum}
 
-            },
-            methods:{
-                getSelected:function(){
+                    }
+                    ,
 
                 }
-            },
-        });
+            ,
 
 
-        var span = "<span></span>";
-         var carIndex=0;
-        $(".add").click(function () {
-            carIndex++;
-            //获取对象
-            var th = $(this);
-            th.append(span);
-            var p1 = [];
-            //【添加购物车
-            var x_car = $(".car").offset().left;
-            var y_car = $(".car").offset().top;
-            p1.push(x_car+30, y_car);
-            //存放car位置
-            var p2 = [];
-            var x = $(this).offset().left;
-            var y = $(this).offset().top;
-            p2.push(x, y);
-            //定义参数
-            var Xv, Yv, t, v, a = 5;
-            t = Math.sqrt((p1[1] - p2[1]) / a / 2);
-
-            v = (p2[0] - p1[0]) / t;
-            var i = 0;
-            var T = setInterval(function () {
-                Xv = i * v * 0.5;
-                Yv = a * i * i * 2 * 0.25;
-                i++;
-                if (Yv>p1[1] - p2[1]) {
-                    clearInterval(T);
-                    th.children("span").eq(0).remove();
-                  /* console.log(Xv > p2[0] - p1[0])*/
-                } else {
-                    th.children("span").eq(0).css({
-                        background: "#FF0000",
-                        transform: "translate(" + -Xv + "px," + Yv + "px)"});
-                   /* th.siblings(".l-b").text(carIndex);*/
-                   /* $(".product-list-footer .wam").text(carIndex);*/
-                }
-            }, 30);
-
+        })
+    ;
+    $(function(){
+        $(".allselect").click(function(){
+            $(".add").click();
         })
     })
 </script>
-
 </body>
-
 </html>
