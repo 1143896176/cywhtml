@@ -68,11 +68,10 @@
                             <p style="font-size: 12px;display: inline-block;">￥<span
                                     style="font-size: 14px">{{item.pro_pries}}</span></p>
                             <p class="number-car  f-right">
-                                <span class="cut" @click="item.pro_num>0?item.pro_num--:''"></span>
+                                <span class="cut" @click="item.pro_num>0?item.pro_num--:'';getIsOk(index)"></span>
                                 <span class="l-b"
                                       style="height: 20px;width: 20px;text-align: center;font-size: 14px;line-height: 20px;">{{item.pro_num}}</span>
-                                <span class="add " @click="item.pro_num++"@click="
-"></span>
+                                <span class="add " @click="item.pro_num++; getIndex(index)"></span>
                             </p>
 
                         </div>
@@ -86,7 +85,7 @@
     <div class="product-list-footer">
         <div class="footer-l">
             <div class="car l-b">
-                <span class=" wam l-b" style="line-height: 20px;">{{GetAllpries.allnum}}</span>
+                <span class=" wam l-b" style="line-height: 19px;">{{GetAllpries.allnum}}</span>
             </div>
             <div class="color-w">
                 总计:￥{{GetAllpries.allprise}}
@@ -190,7 +189,6 @@
                     if (this.addCar[index] == null) {
                         this.addCar.push(index);
                     }
-
                 },
                 getIsOk: function (val) {
                     function RemoveValByIndex(arr, index) {
@@ -204,7 +202,7 @@
             },
             computed:{
                     GetAllpries: function () {
-                        console.log(new Date().getTime());
+
                         var allprise = 0.0;
                         var allnum = 0;
 
@@ -215,7 +213,7 @@
                             allprise += prise2;
                             allnum += this.products[index].pro_num;
                         }
-                        console.log(new Date().getTime());
+
                         return {allprise: allprise.toFixed(1), allnum: allnum}
 
                     },
