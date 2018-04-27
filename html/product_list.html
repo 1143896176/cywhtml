@@ -91,7 +91,7 @@
                 总计:￥{{GetAllpries.allprise}}
             </div>
         </div>
-        <div class="footer-r" style="text-align: center;">还差200起送</div>
+        <div class="footer-r" style="text-align: center;">还差{{GetAllpries.need}}起送</div>
     </div>
 </div>
 <div style="height:50px;"></div>
@@ -205,16 +205,24 @@
 
                         var allprise = 0.0;
                         var allnum = 0;
-
+                        var need=200;
                         for (var i = 0; i < this.addCar.length; i++) {
                             var index = this.addCar[i];
                             var prise = (this.products[index].pro_pries * this.products[index].pro_num)
                             prise2 = parseInt(prise * 10) / 10;
+
+                                allnum += this.products[index].pro_num;
+                           if( allnum>99){
+                               allnum="99+"
+                           }
                             allprise += prise2;
-                            allnum += this.products[index].pro_num;
+                            need=200-allprise;
+                            if(need<0){
+                                need=0;
+                            }
                         }
 
-                        return {allprise: allprise.toFixed(1), allnum: allnum}
+                        return {allprise: allprise.toFixed(1), allnum: allnum,need:need}
 
                     },
                 },

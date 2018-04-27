@@ -20,8 +20,8 @@
       <file leaf-file-name="product_list.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/product_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+            <state relative-caret-position="672">
+              <caret line="272" column="6" lean-forward="true" selection-start-line="272" selection-start-column="6" selection-end-line="272" selection-end-column="6" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -29,7 +29,7 @@
                 <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#6077#6706#0" expanded="false" />
+                <element signature="e#6116#6745#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -38,14 +38,13 @@
       <file leaf-file-name="Vue索引检测.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vue索引检测.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="1450" column="13" lean-forward="true" selection-start-line="1366" selection-start-column="10" selection-end-line="1450" selection-end-column="13" />
+            <state relative-caret-position="2808">
+              <caret line="1411" column="22" lean-forward="false" selection-start-line="1411" selection-start-column="22" selection-end-line="1411" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ul#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="e#4293#52711#0" expanded="false" />
-                <element signature="e#52734#55334#0" expanded="false" />
                 <element signature="e#55374#56203#0" expanded="false" />
               </folding>
             </state>
@@ -94,8 +93,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9270">
-              <caret line="309" column="65" lean-forward="false" selection-start-line="309" selection-start-column="65" selection-end-line="309" selection-end-column="65" />
+            <state relative-caret-position="282">
+              <caret line="303" column="15" lean-forward="false" selection-start-line="303" selection-start-column="15" selection-end-line="303" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -224,10 +223,10 @@
         <option value="$PROJECT_DIR$/test3.html" />
         <option value="$PROJECT_DIR$/js/一次方程计算kc.js" />
         <option value="$PROJECT_DIR$/js/二元一次方程计算.js" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/css/util.css" />
         <option value="$PROJECT_DIR$/test4.html" />
         <option value="$PROJECT_DIR$/Vue索引检测.html" />
+        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/html/product_list.html" />
       </list>
     </option>
@@ -279,6 +278,11 @@
             <path>
               <item name="cywhtml" type="b2602c69:ProjectViewProjectNode" />
               <item name="cywhtml" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cywhtml" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cywhtml" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cywhtml" type="b2602c69:ProjectViewProjectNode" />
@@ -417,28 +421,7 @@
       <workItem from="1524617910188" duration="28868000" />
       <workItem from="1524704349909" duration="6214000" />
       <workItem from="1524714217301" duration="15508000" />
-      <workItem from="1524790731433" duration="15814000" />
-    </task>
-    <task id="LOCAL-00013" summary="分类搜索页面静态的已完成">
-      <created>1520845534272</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1520845534272</updated>
-    </task>
-    <task id="LOCAL-00014" summary="改了title">
-      <created>1520845719752</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1520845719752</updated>
-    </task>
-    <task id="LOCAL-00015" summary="css首单样式做了调整">
-      <created>1520845911026</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1520845911026</updated>
+      <workItem from="1524790731433" duration="19602000" />
     </task>
     <task id="LOCAL-00016" summary="css首单样式做了调整">
       <created>1520846315815</created>
@@ -762,11 +745,32 @@
       <option name="project" value="LOCAL" />
       <updated>1524810568785</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="优化完的版本">
+      <created>1524811047836</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1524811047846</updated>
+    </task>
+    <task id="LOCAL-00063" summary="优化完的版本">
+      <created>1524811551402</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1524811551402</updated>
+    </task>
+    <task id="LOCAL-00064" summary="优化完的版本并去掉了横向滚动条">
+      <created>1524812632729</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1524812632729</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="324068000" />
+    <option name="totallyTimeSpent" value="327856000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -818,7 +822,9 @@
     <MESSAGE value="添加了订单支付页&#10;头部样式" />
     <MESSAGE value="商品列表页添加动画未完成" />
     <MESSAGE value="监听事件不能监听到数据的改变" />
-    <option name="LAST_COMMIT_MESSAGE" value="监听事件不能监听到数据的改变" />
+    <MESSAGE value="优化完的版本" />
+    <MESSAGE value="优化完的版本并去掉了横向滚动条" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化完的版本并去掉了横向滚动条" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1054,14 +1060,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9270">
-          <caret line="309" column="65" lean-forward="false" selection-start-line="309" selection-start-column="65" selection-end-line="309" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/swiper.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1117,23 +1115,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue索引检测.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="1450" column="13" lean-forward="true" selection-start-line="1366" selection-start-column="10" selection-end-line="1450" selection-end-column="13" />
+        <state relative-caret-position="2808">
+          <caret line="1411" column="22" lean-forward="false" selection-start-line="1411" selection-start-column="22" selection-end-line="1411" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ul#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="e#4293#52711#0" expanded="false" />
-            <element signature="e#52734#55334#0" expanded="false" />
             <element signature="e#55374#56203#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="303" column="15" lean-forward="false" selection-start-line="303" selection-start-column="15" selection-end-line="303" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/html/product_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        <state relative-caret-position="672">
+          <caret line="272" column="6" lean-forward="true" selection-start-line="272" selection-start-column="6" selection-end-line="272" selection-end-column="6" />
           <folding>
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1141,7 +1146,7 @@
             <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#6077#6706#0" expanded="false" />
+            <element signature="e#6116#6745#0" expanded="false" />
           </folding>
         </state>
       </provider>
