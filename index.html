@@ -558,7 +558,7 @@
            /* window.location.href= image.src*/
            /* var tempSrc = canvas.toDataURL("image/png");
             img.src=tempSrc;*/
-            $('#canvas').append(`<img src="${image.src}">`)
+            $('#canvas').append(`<img src="${image.src}" width="100%">`)
         });
         setTimeout(function(){
         $('#canvas').children('canvas').siblings('div').remove()

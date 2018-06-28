@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5b892a85-0510-493a-baee-56ab92c0bf90" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/utils.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/utils.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -56,8 +57,8 @@
       <file leaf-file-name="utils.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/utils.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+            <state>
+              <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -65,12 +66,22 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="561" column="11" lean-forward="true" selection-start-line="561" selection-start-column="11" selection-end-line="561" selection-end-column="11" />
+            <state relative-caret-position="384">
+              <caret line="560" column="68" selection-start-line="560" selection-start-column="68" selection-end-line="560" selection-end-column="68" />
               <folding>
+                <element signature="e#508#710#0" />
+                <element signature="e#730#858#0" />
+                <element signature="e#878#1194#0" />
+                <element signature="e#1218#1261#0" />
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#1;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#li#0;n#ul#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
@@ -213,12 +224,12 @@
         <option value="$PROJECT_DIR$/js/二元一次方程计算.js" />
         <option value="$PROJECT_DIR$/css/util.css" />
         <option value="$PROJECT_DIR$/test4.html" />
-        <option value="$PROJECT_DIR$/css/utils.css" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/html/login.html" />
         <option value="$PROJECT_DIR$/html/product_list.html" />
         <option value="$PROJECT_DIR$/Vue索引检测.html" />
         <option value="$PROJECT_DIR$/.git/config" />
+        <option value="$PROJECT_DIR$/css/utils.css" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -412,14 +423,7 @@
       <workItem from="1530008238855" duration="1297000" />
       <workItem from="1530081083554" duration="2372000" />
       <workItem from="1530165481501" duration="130000" />
-      <workItem from="1530166878373" duration="3183000" />
-    </task>
-    <task id="LOCAL-00020" summary="将alert删除了">
-      <created>1520902779388</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1520902779388</updated>
+      <workItem from="1530166878373" duration="3878000" />
     </task>
     <task id="LOCAL-00021" summary="商户列表样式完善">
       <created>1520903548174</created>
@@ -757,11 +761,18 @@
       <option name="project" value="LOCAL" />
       <updated>1530169513075</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="添加了截图功能">
+      <created>1530170149339</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1530170149339</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="348772000" />
+    <option name="totallyTimeSpent" value="349467000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1002,13 +1013,6 @@
     <entry file="file://$PROJECT_DIR$/css/swiper.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/utils.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/submit_order.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1039,14 +1043,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/utils.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="561" column="11" lean-forward="true" selection-start-line="561" selection-start-column="11" selection-end-line="561" selection-end-column="11" />
+        <state relative-caret-position="384">
+          <caret line="560" column="68" selection-start-line="560" selection-start-column="68" selection-end-line="560" selection-end-column="68" />
           <folding>
+            <element signature="e#508#710#0" />
+            <element signature="e#730#858#0" />
+            <element signature="e#878#1194#0" />
+            <element signature="e#1218#1261#0" />
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#1;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#li#0;n#ul#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
