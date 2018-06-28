@@ -99,9 +99,7 @@
          //【点击send
          $('.send').click(function(){
              judge_tel();
-             if(flag_tel==true ){
-                 countdown();
-             }
+             if(flag_tel==true ){countdown();}
          })
          //【当点击协议时判断是否合法
          $('.agree').click(function(){
@@ -110,7 +108,7 @@
          //【判断手机号输入是否正确
          function judge_tel(){
              var tel_val=$('.quikly-login .tel').val();
-             //标准：首位是一共十一位
+             //标准：首位是一,共十一位
              var reg=new RegExp(/^1[0-9]{10}$/);
              flag_tel=reg.test(tel_val);
              if(flag_tel==true){
@@ -134,19 +132,11 @@
          //【判断验证码是否输入
          function judge_num(){
              var num_val=$('.num').val();
-             if(num_val==''||num_val==null){
-                 flag_num=false;
-             }else{
-                 flag_num=true;
-             }
+             if(num_val==''||num_val==null){flag_num=false;}else{flag_num=true;}
          }
          //【判断是否勾选同意
          function judge_agree(){
-                 if(flag_agr==true){
-                     flag_agr=false;
-                 }else{
-                     flag_agr=true;
-                 }
+                 if(flag_agr==true){flag_agr=false;}else{flag_agr=true;}
          }
      })
 </script>

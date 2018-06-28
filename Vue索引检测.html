@@ -24,7 +24,6 @@
 </head>
 <body>
 <div class="product-list" id="app">
-    <div class="allselect" style="width:100px;height:100px;background: red;"></div>
     <div class="show-img">
         <img src="img/商品展示大图.png" width="100%" height="100%">
         <div class="show-bottom ">
@@ -56,14 +55,71 @@
     </div>
     <div class="set-meal">
         <ul>
-            <p>套餐</p>
-            <li>凉菜凉菜</li>
+
+            <li v-for="item in tao">{{item.title}}</li>
             <li>热菜</li>
         </ul>
         <div class="set-meal-warp">
-            <p class="set-meal-warp-1">套餐</p>
-            <ul>
-                <li v-for="(item ,index) in products">
+            <p class="set-meal-warp-1">{{tao.title}}</p>
+            <ul >
+
+                <li v-for="(item,index) in tao.products">
+                    <img src="img/other/listbackground.png" alt="" width="70" height="70">
+                    <div class="menu-warp1">
+                        <p style="font-size:14px;color:#333333;">{{item.pro_name}}</p>
+                        <p class="menu"
+                           style="max-width:80%; white-space:nowrap;text-overflow:ellipsis;overflow:hidden;">
+                            {{item.pro_menu}} </p>
+                        <p style="font-size:11px;color:#666;">销量{{item.pro_sales}}</p>
+                        <div>
+                            <p style="font-size: 12px;display: inline-block;">￥<span
+                                    style="font-size: 14px">{{item.pro_pries}}</span></p>
+                            <p class="number-car  f-right">
+                                <span class="cut" @click="item.pro_num>0?item.pro_num--:'';getIsOk(index)"></span>
+                                <span class="l-b"
+                                      style="height: 20px;width: 20px;text-align: center;font-size: 14px;line-height: 20px;">{{item.pro_num}}</span>
+                                <span class="add " @click="getIndex(index);item.pro_num++"
+                                ></span>
+                            </p>
+
+                        </div>
+                    </div>
+
+                </li>
+
+            </ul>
+            <p class="set-meal-warp-1">{{liang.title}}</p>
+            <ul >
+
+                <li v-for="(item,index) in liang.products">
+                    <img src="img/other/listbackground.png" alt="" width="70" height="70">
+                    <div class="menu-warp1">
+                        <p style="font-size:14px;color:#333333;">{{item.pro_name}}</p>
+                        <p class="menu"
+                           style="max-width:80%; white-space:nowrap;text-overflow:ellipsis;overflow:hidden;">
+                            {{item.pro_menu}} </p>
+                        <p style="font-size:11px;color:#666;">销量{{item.pro_sales}}</p>
+                        <div>
+                            <p style="font-size: 12px;display: inline-block;">￥<span
+                                    style="font-size: 14px">{{item.pro_pries}}</span></p>
+                            <p class="number-car  f-right">
+                                <span class="cut" @click="item.pro_num>0?item.pro_num--:'';getIsOk(index)"></span>
+                                <span class="l-b"
+                                      style="height: 20px;width: 20px;text-align: center;font-size: 14px;line-height: 20px;">{{item.pro_num}}</span>
+                                <span class="add " @click="getIndex(index);item.pro_num++"
+                                ></span>
+                            </p>
+
+                        </div>
+                    </div>
+
+                </li>
+
+            </ul>
+            <p class="set-meal-warp-1">{{re.title}}</p>
+            <ul >
+
+                <li v-for="(item,index) in re.products">
                     <img src="img/other/listbackground.png" alt="" width="70" height="70">
                     <div class="menu-warp1">
                         <p style="font-size:14px;color:#333333;">{{item.pro_name}}</p>
@@ -110,1279 +166,158 @@
     var vm = new Vue({
             el: "#app",
             data: {
-                products: [
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },{
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },{
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },{
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },{
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },{
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },{
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },{
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },{
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },{
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },{
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '0',
-                        'pro_pries': 29.00,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    },
-                    {
-                        'pro_name': '精选米饭套餐',
-                        'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
-                        'pro_sales': '18',
-                        'pro_pries': 29.01,
-                        'pro_num': 0
-                    }
-                ],
+                tao:{
+                    title:"套餐",
+                    products: [
+                        {
+                            'pro_name': '精选米饭套餐',
+                            'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
+                            'pro_sales': '18',
+                            'pro_pries': 29.01,
+                            'pro_num': 0
+                        },
+                        {
+                            'pro_name': '精选米饭套餐',
+                            'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
+                            'pro_sales': '0',
+                            'pro_pries': 29.00,
+                            'pro_num': 0
+                        },
+                        {
+                            'pro_name': '精选米饭套餐',
+                            'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
+                            'pro_sales': '18',
+                            'pro_pries': 29.01,
+                            'pro_num': 0
+                        },
+                    ],
+                },
+                liang:{
+                    title:"凉菜",
+                    products: [
+                        {
+                            'pro_name': '精选米饭套餐',
+                            'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
+                            'pro_sales': '18',
+                            'pro_pries': 29.01,
+                            'pro_num': 0
+                        },{
+                            'pro_name': '精选米饭套餐',
+                            'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
+                            'pro_sales': '0',
+                            'pro_pries': 29.00,
+                            'pro_num': 0
+                        },
+                        {
+                            'pro_name': '精选米饭套餐',
+                            'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
+                            'pro_sales': '18',
+                            'pro_pries': 29.01,
+                            'pro_num': 0
+                        },
+                        {
+                            'pro_name': '精选米饭套餐',
+                            'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
+                            'pro_sales': '18',
+                            'pro_pries': 29.01,
+                            'pro_num': 0
+                        },
+                        {
+                            'pro_name': '精选米饭套餐',
+                            'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
+                            'pro_sales': '0',
+                            'pro_pries': 29.00,
+                            'pro_num': 0
+                        },
+                        {
+                            'pro_name': '精选米饭套餐',
+                            'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
+                            'pro_sales': '18',
+                            'pro_pries': 29.01,
+                            'pro_num': 0
+                        },
+                        {
+                            'pro_name': '精选米饭套餐',
+                            'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
+                            'pro_sales': '18',
+                            'pro_pries': 29.01,
+                            'pro_num': 0
+                        },
+                        {
+                            'pro_name': '精选米饭套餐',
+                            'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
+                            'pro_sales': '0',
+                            'pro_pries': 29.00,
+                            'pro_num': 0
+                        },
+
+                    ],
+                },
+                re:{
+                    title:"热菜",
+                    products: [
+                        {
+                            'pro_name': '精选米饭套餐',
+                            'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
+                            'pro_sales': '18',
+                            'pro_pries': 29.01,
+                            'pro_num': 0
+                        },{
+                            'pro_name': '精选米饭套餐',
+                            'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
+                            'pro_sales': '0',
+                            'pro_pries': 29.00,
+                            'pro_num': 0
+                        },
+                        {
+                            'pro_name': '精选米饭套餐',
+                            'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
+                            'pro_sales': '18',
+                            'pro_pries': 29.01,
+                            'pro_num': 0
+                        },
+                        {
+                            'pro_name': '精选米饭套餐',
+                            'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
+                            'pro_sales': '18',
+                            'pro_pries': 29.01,
+                            'pro_num': 0
+                        },
+                        {
+                            'pro_name': '精选米饭套餐',
+                            'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
+                            'pro_sales': '0',
+                            'pro_pries': 29.00,
+                            'pro_num': 0
+                        },
+                        {
+                            'pro_name': '精选米饭套餐',
+                            'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
+                            'pro_sales': '18',
+                            'pro_pries': 29.01,
+                            'pro_num': 0
+                        },
+                        {
+                            'pro_name': '精选米饭套餐',
+                            'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
+                            'pro_sales': '18',
+                            'pro_pries': 29.01,
+                            'pro_num': 0
+                        },
+                        {
+                            'pro_name': '精选米饭套餐',
+                            'pro_menu': '精品烤鸭、老城水爆肚、芥末鸭掌',
+                            'pro_sales': '0',
+                            'pro_pries': 29.00,
+                            'pro_num': 0
+                        },
+
+                    ],},
+
                 addCar: []
             },
             methods: {
-                test: function est() {
-                    Function.prototype.before = function (beforefn) {
-                        var _self = this;                           // 保存原函数的引用
-                        return function () {                      // 返回包含了原函数和新函数的"代理"函数
-                            beforefn.apply(this, arguments);     // 执行新函数，修正this
-                            return _self.apply(this, arguments);// 执行原函数
-                        }
-                    }
-                    Function.prototype.after = function (afterfn) {
-                        var _self = this;
-                        return function () {
-                            var ret = _self.apply(this, arguments);
-                            afterfn.apply(this, arguments);
-                            return ret;
-                        }
-                    }
-                    getIsOk=getIsOk.before(console.log(new Date().getTime())).after(console.log(new Date().getTime()))
-                },
+
                 getIndex: function (index) {
                     if (this.addCar[index] == null) {
                         this.addCar.push(index);
@@ -1390,47 +325,19 @@
 
                 },
                 getIsOk: function (val) {
-                    Function.prototype.before = function (beforefn) {
-                        var _self = this;                           // 保存原函数的引用
-                        return function () {                      // 返回包含了原函数和新函数的"代理"函数
-                            beforefn.apply(this, arguments);     // 执行新函数，修正this
-                            return _self.apply(this, arguments);// 执行原函数
-                        }
-                    }
-                    Function.prototype.after = function (afterfn) {
-                        var _self = this;
-                        return function () {
-                            var ret = _self.apply(this, arguments);
-                            afterfn.apply(this, arguments);
-                            return ret;
-                        }
-                    }
-                    RemoveValByIndex = RemoveValByIndex.before(function () {
-
-                    }).after(function () {
-
-                    })
-
                     function RemoveValByIndex(arr, index) {
                         arr.splice(index, 1);
                     }
-
-                    //console.log(this.products[val].pro_num)
                     if (this.products[val].pro_num == 0) {
-
                         RemoveValByIndex(this.addCar, val)
-                        //console.log(this.addCar);
                     }
-
-
                 },
-
             },
             computed:
                 {
 
                     GetAllpries: function () {
-                        console.log(new Date().getTime())
+
                         var allprise = 0.0;
                         var allnum = 0;
 
@@ -1449,7 +356,6 @@
 
                 }
             ,
-
 
         })
     ;
