@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b892a85-0510-493a-baee-56ab92c0bf90" name="Default" comment="整理了css格式呢">
-      <change afterPath="$PROJECT_DIR$/js/html2canvas.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.git/config" beforeDir="false" afterPath="$PROJECT_DIR$/.git/config" afterDir="false" />
+    <list default="true" id="5b892a85-0510-493a-baee-56ab92c0bf90" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue索引检测.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vue索引检测.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/product_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/product_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -67,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="557" column="43" lean-forward="true" selection-start-line="557" selection-start-column="43" selection-end-line="557" selection-end-column="43" />
+            <state relative-caret-position="326">
+              <caret line="561" column="11" lean-forward="true" selection-start-line="561" selection-start-column="11" selection-end-line="561" selection-end-column="11" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
@@ -82,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.git/config">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+            <state relative-caret-position="410">
+              <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -223,8 +218,8 @@
         <option value="$PROJECT_DIR$/html/login.html" />
         <option value="$PROJECT_DIR$/html/product_list.html" />
         <option value="$PROJECT_DIR$/Vue索引检测.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/.git/config" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -301,7 +296,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="F:/" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -417,21 +412,7 @@
       <workItem from="1530008238855" duration="1297000" />
       <workItem from="1530081083554" duration="2372000" />
       <workItem from="1530165481501" duration="130000" />
-      <workItem from="1530166878373" duration="1865000" />
-    </task>
-    <task id="LOCAL-00018" summary="css首单样式做了调整">
-      <created>1520847634384</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1520847634384</updated>
-    </task>
-    <task id="LOCAL-00019" summary="css首单样式做了调整">
-      <created>1520847864254</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1520847864254</updated>
+      <workItem from="1530166878373" duration="3183000" />
     </task>
     <task id="LOCAL-00020" summary="将alert删除了">
       <created>1520902779388</created>
@@ -762,11 +743,25 @@
       <option name="project" value="LOCAL" />
       <updated>1524817720849</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="添加了截图功能">
+      <created>1530168783482</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1530168783483</updated>
+    </task>
+    <task id="LOCAL-00068" summary="添加了截图功能">
+      <created>1530169513075</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1530169513075</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="347454000" />
+    <option name="totallyTimeSpent" value="348772000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -822,7 +817,8 @@
     <MESSAGE value="优化完的版本" />
     <MESSAGE value="优化完的版本并去掉了横向滚动条" />
     <MESSAGE value="整理了css格式呢" />
-    <option name="LAST_COMMIT_MESSAGE" value="整理了css格式呢" />
+    <MESSAGE value="添加了截图功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加了截图功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1036,23 +1032,23 @@
     <entry file="file://$PROJECT_DIR$/html/me_message.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/.git/config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="557" column="43" lean-forward="true" selection-start-line="557" selection-start-column="43" selection-end-line="557" selection-end-column="43" />
+        <state relative-caret-position="326">
+          <caret line="561" column="11" lean-forward="true" selection-start-line="561" selection-start-column="11" selection-end-line="561" selection-end-column="11" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#li#0;n#ul#1;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.git/config">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
         </state>
       </provider>
     </entry>
